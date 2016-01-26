@@ -1,0 +1,191 @@
+@mixin selection($background: currentColor, $color: invert(currentColor)) {
+    ::selection {
+        background-color: $background;
+        text-shadow: none;
+        color: $color;
+    }
+}
+
+.color {
+    &-pink {
+        color: $pink-color;
+    }
+
+    &-black {
+        color: $black-color;
+    }
+
+    &-red {
+        color: $red-color;
+    }
+
+    &-green {
+        color: $green-color;
+    }
+
+    &-grey {
+        color: $grey-color;
+    }
+
+    &-blue {
+        color: $blue-color;
+    }
+
+    &-main {
+        color: $main-color;
+    }
+}
+
+// Todo turn those two grays to syntax color-grey like above
+
+%grey,
+.grey {
+    color: $medium-grey-color;
+}
+
+%darkgrey,
+.darkgrey {
+    color: $dark-grey-color;
+}
+
+// These are the color rules.
+// The background color of the block, set at the parent element level,
+// defines the colors of the elements in it
+
+// At the element level, colors will be using currentColor value, to inherit
+// from the following values
+
+.bg {
+    &-dark-purple {
+        @include selection(transparent, $main-color);
+        background-color: $bg-dark-purple;
+        color: $grey-color;
+
+        &.opacity {
+            background-color: transparent;
+        }
+
+        .button {
+            &:hover,
+            a:hover > & {
+                box-shadow: 0 .125rem $dark-purple-color;
+                text-shadow: 0 .125rem $dark-purple-color;
+            }
+        }
+    }
+
+    &-light-purple {
+        @include selection($light-grey-color, $bg-light-purple);
+        background-color: $bg-light-purple;
+        color: $light-grey-color;
+
+        .button {
+            transition: background-color $transition-timing $transition-easing,
+                        color $transition-timing $transition-easing-reversed,
+                        border-color $transition-timing $transition-easing;
+            color: $white-color;
+
+            &:hover,
+            a:hover > & {
+                border-color: $white-color;
+                background-color: $white-color;
+                text-decoration: none;
+                color: $bg-light-purple;
+            }
+        }
+    }
+
+    &-grey {
+        @include selection($purple-color, $bg-grey);
+        background-color: $bg-grey;
+        color: $purple-color;
+
+        .text-link {
+            color: $main-sat-color;
+            font-weight: $font-weight-bold;
+        }
+
+    }
+
+    &-white {
+        @include selection(rgba($main-color, 0.75), $bg-white);
+        background-color: $bg-white;
+        color: $black-color;
+    }
+
+    &-purple {
+        @include selection($dark-purple-color, $bg-grey);
+        background-color: $bg-purple;
+        color: $light-grey-color;
+
+        .button {
+            color: $dark-purple-color;
+        }
+    }
+
+    &-main {
+        @include selection($dark-purple-color, $bg-grey);
+        background-color: $bg-main;
+        color: $light-grey-color;
+
+        .button {
+            color: currentColor;
+        }
+    }
+}
+
+// Used only on the home hero section so far
+// adapted to jpg color that is wrong because of compression
+@include queries($md) {
+    .bg-dark-purple-gradient {
+        position: relative;
+        z-index: 1;
+        background-image: linear-gradient(to right, #1f1828 0%, #1f1828 50%, rgba(#1f1828, .2) 100%);
+
+        &:before {
+            position: absolute;
+            right: 0;
+            background-image: linear-gradient(to top, $light-grey-color 0%, rgba($light-grey-color, 0) 100%);
+            width: 1px;
+            height: 100%;
+            content: '';
+        }
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            box-shadow: .156rem .269rem .313rem rgba($dark-purple-color, .5);
+            width: 300%;
+            height: 100%;
+            content: '';
+        }
+    }
+}
+
+// Generic gradients
+// From the top left
+.bg-diagonal-left-purple-gradient {
+    background: linear-gradient(135deg, $purple-color-faded 0%, transparent 52%);
+}
+
+.bg-diagonal-left-lightpurple-gradient {
+    background: linear-gradient(135deg, $light-purple-color 0%, transparent 52%);
+}
+
+// From the top right
+.bg-diagonal-right-purple-gradient {
+    background: linear-gradient(195deg, $purple-color-faded 0%, transparent 85%);
+}
+
+.bg-diagonal-right-lightpurple-gradient {
+    background: linear-gradient(195deg, $light-purple-color 0%, transparent 85%);
+}
+
+// Radial gradient from the top center
+.bg-radial-purple-gradient {
+    background: radial-gradient(ellipse at center, $purple-color-faded 23%, transparent 70%);
+    background-position: 0;
+    background-size: 100% 300%;
+}

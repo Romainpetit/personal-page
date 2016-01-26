@@ -1,0 +1,117 @@
+$column-count: 12 !default;
+$column-selector: '.col' !default;
+$container-selector: '.container' !default;
+$font-selector: ':root' !default;
+$offset-modifier: 'offset' !default;
+$gutter-width: 1rem !default;
+$outer-margin: 4rem !default;
+$gutter-compensation: (($gutter-width / 2) * -1) !default;
+$half-gutter-width: ($gutter-width / 2) !default;
+
+// Breakpoints definitions in em. Unit added afterwards for easier calculations
+$width-xs: 0 !default;   // Starting value
+$width-sm: 21 !default;  // 336px
+$width-md: 33 !default;  // 528px
+$width-lg: 50 !default;  // 800px
+$width-xl: 67 !default;  // 1072px
+$width-xxl: 88 !default; // 1408px
+
+// This breakpoint is used for the header only atm and does not generate breakpoint specific helper classes
+$custom-mobile: 28.125em;
+$custom-mobile-large: 675px;
+$custom-tablet: 755px;
+
+// Viewport width breakpoint, with unit
+$viewport-xs: #{$width-xs}em !default;
+$viewport-sm: #{$width-sm}em !default;
+$viewport-md: #{$width-md}em !default;
+$viewport-lg: #{$width-lg}em !default;
+$viewport-xl: #{$width-xl}em !default;
+$viewport-xxl: #{$width-xxl}rem !default;
+
+// Containers width for each breakpoint
+$container-xs: 100% !default;
+$container-sm: 100% !default;
+$container-md: #{$width-md}em !default;
+$container-lg: #{$width-lg + 2}em !default;
+$container-xl: #{$width-xl - 8}em !default;
+$container-xxl: #{($width-xxl - 28)}rem !default;
+
+// Containers padding for each breakpoint
+$container-xs-p: ($outer-margin / 2);
+$container-sm-p: 3.75rem;
+$container-md-p: 6rem;
+$container-lg-p: $outer-margin;
+$container-xl-p: $outer-margin;
+$container-xxl-p: $outer-margin;
+
+// Base font size factor for each breakpoint. REM metrics used everywhere else.
+$font-xs: 75%; // 12px
+$font-sm: 75%; // 14px
+$font-md: 87.5%; // 16px
+$font-lg: 87.5%; // 16px
+$font-xl: 87.5%; // 16px
+$font-xxl: 100%; // 18px
+
+// Breakpoints namespace
+$xs: 'xs' !default;
+$sm: 'sm' !default;
+$md: 'md' !default;
+$lg: 'lg' !default;
+$xl: 'xl' !default;
+$xxl: 'xxl' !default;
+
+$block-delimiter: '-' !default;
+$element-delimiter: '-' !default;
+$modifier-delimiter: '-' !default;
+$default-query: $viewport-xs !default;
+
+// Putting breakpoint related values in arrays
+$sizes: $xs $sm $md $lg $xl $xxl !default;
+$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}, #{$xl}:#{$viewport-xl}, #{$xxl}:#{$viewport-xxl}) !default;
+$fonts: (#{$xs}:#{$font-xs}, #{$sm}:#{$font-sm}, #{$md}:#{$font-md}, #{$lg}:#{$font-lg}, #{$xl}:#{$font-xl}, #{$xxl}:#{$font-xxl}) !default;
+$containers: (#{$xs}:#{$container-xs}, #{$sm}:#{$container-sm}, #{$md}:#{$container-md}, #{$lg}:#{$container-lg}, #{$xl}:#{$container-xl}, #{$xxl}:#{$container-xxl}) !default;
+$containers-p: (#{$xs}:#{$container-xs-p}, #{$sm}:#{$container-sm-p}, #{$md}:#{$container-md-p}, #{$lg}:#{$container-lg-p}, #{$xl}:#{$container-xl-p}, #{$xxl}:#{$container-xxl-p}) !default;
+$column-properties: 'flex-basis',
+                    'max-width' !default;
+$offset-properties: 'margin-left' !default;
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    @include queries($md) {
+        margin: 4rem 0;
+    }
+}
+
+%container {
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@include containers();
+@include fonts();
+
+.row {
+    display: flex;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+%column {
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+@include columns();
+@include offsets();

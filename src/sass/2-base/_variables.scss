@@ -1,0 +1,204 @@
+//------------------------------------------------------------------
+// Variables
+//-------------------------------------------------------------------
+
+// For all variables related to the grid system,
+// breakpoints, see grid.scss.
+
+// Colors
+$pink-color: hsla(344, 100%, 67%, 1);
+$pink-color-sat: hsla(344, 100%, 60%, 1);
+$light-purple-color: hsla(252, 19%, 32%, 1);
+$purple-color: hsla(265, 26%, 25%, 1);
+$purple-color-faded: hsla(262, 18%, 24%, 1);
+$dark-purple-color: hsla(266, 25%, 13%, 1);
+$dark-grey-color: $dark-purple-color;
+$white-color: hsla(0, 0%, 100%, 1);
+$light-grey-color: hsla(228, 33%, 97%, 1);
+$grey-color: hsla(228, 13%, 92%, 1);
+$medium-grey-color: hsla(240, 33%, 87%, 1);
+$red-color: hsla(0, 63%, 45%, 1);
+$green-color: hsla(120, 50%, 27%, 1);
+$blue-color: rgb(0, 128, 208);
+$blue-sat-color: darken($blue-color, 10%);
+$black-color: rgb(32, 47, 51);
+
+// Main color definition
+
+$main-color: $blue-color;
+$main-sat-color: $blue-sat-color;
+
+// Error color
+$error-color: $red-color;
+
+//-----Base-----//
+$base-font-size: 1rem;
+$font-size-large: 1.125rem;
+$font-size-small: .9375rem;
+$font-size-smaller: .875rem;
+$base-line-height: 1.428571429;
+$base-font-color: hsla(0, 0%, 20%, 1);
+$copy-color: $black-color;
+$base-background-color: $white-color;
+
+$font-family-serif: 'freight_text', Georgia, serif;
+$font-family-sans-serif: 'proxima_nova_rgbold', Verdana, 'DejaVu Sans', 'Bitstream Vera Sans', 'Lucida Grande', sans-serif;
+
+$font-weight-book: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-xbold: 900;
+
+$transition-timing: .15s;
+$transition-easing: ease-in-out;
+$transition-easing-reversed: ease-out;
+
+$transition-timing-fast: .3s;
+$transition-timing-med: .4s;
+$transition-timing-slow: .7s;
+$transition-easing-header: cubic-bezier(.7, 0, .3, 1);
+
+$border-width: .125rem;
+$border-color: $white-color;
+$border-radius: .25rem;
+
+//-----Padding-----//
+//>>For container, col, row (default 15px)
+$box-bottom-padding: 2.625rem;
+$box-top-padding: 2.8125rem;
+
+//-----Sanitize.css variables-----//
+$root-font-size: $base-font-size;
+$html-background-color: $base-background-color;
+$root-line-height: $base-line-height;
+$html-color: $base-font-color;
+$selection-background-color: $dark-purple-color;
+
+//-----Colors-----//
+//>>Primary
+$primary-color-text: hsla(0, 0%, 20%, 1);
+$primary-color-title: hsla(202, 98%, 37%, 1);
+$primary-color-border: hsla(202, 98%, 37%, 1);
+
+//>>Secondary
+$secondary-color-text: hsla(0, 0%, 20%, 1);
+$secondary-color-title: hsla(202, 98%, 37%, 1);
+$secondary-color-border: hsla(202, 98%, 37%, 1);
+
+//>>Third
+$third-color-text: hsla(0, 0%, 20%, 1);
+$third-color-title: hsla(202, 98%, 37%, 1);
+$third-color-border: hsla(202, 98%, 37%, 1);
+
+//>>bg
+$bg-grey: $light-grey-color;
+$bg-white: $white-color;
+$bg-purple: $purple-color;
+$bg-light-purple: $light-purple-color;
+$bg-dark-purple: $dark-purple-color;
+$bg-pink: $pink-color;
+$bg-blue: $blue-color;
+$bg-main: $main-color;
+
+
+//-----Dropdown-----//
+$dropdown-color-bg-active: hsla(202, 98%, 37%, 1);
+$dropdown-color-bg-focus: hsla(0, 0%, 96%, 1);
+$dropdown-color-text-hover: hsla(0, 0%, 100%, 1);
+
+//-----Buttons-----//
+//>>Primary Button
+$primary-button-color-text: hsla(0, 0%, 100%, 1);
+$primary-button-color-bg: hsla(202, 98%, 37%, 1);
+$primary-button-color-border: hsla(202, 98%, 37%, 1);
+
+$primary-button-color-text-hover: $primary-button-color-text;
+$primary-button-color-bg-hover: hsla(202, 84%, 45%, 1);
+$primary-button-color-border-hover: hsla(202, 84%, 45%, 1);
+
+$primary-button-color-text-active: $primary-button-color-text;
+$primary-button-color-bg-active: hsla(202, 84%, 45%, 1);
+$primary-button-color-border-active: hsla(202, 84%, 45%, 1);
+
+//>>Default Button
+$default-button-color-text: hsla(0, 0%, 20%, 1);
+$default-button-color-bg: hsla(0, 0%, 100%, 1);
+$default-button-color-border: hsla(0, 0%, 80%, 1);
+
+$default-button-color-text-hover: $default-button-color-text;
+$default-button-color-bg-hover: hsla(0, 0%, 92%, 1);
+$default-button-color-border-hover: hsla(0, 0%, 68%, 1);
+
+$default-button-color-text-active: $default-button-color-text;
+$default-button-color-bg-active: $default-button-color-bg-hover;
+$default-button-color-border-active: $default-button-color-border-hover;
+
+//>>Info button
+$info-button-color-text: hsla(0, 0%, 100%, 1);
+$info-button-color-bg: hsla(336, 78%, 47%, 1);
+$info-button-color-border: hsla(336, 78%, 47%, 1);
+
+$info-button-color-text-hover: $info-button-color-text;
+$info-button-color-bg-hover: hsla(336, 86%, 56%, 1);
+$info-button-color-border-hover: hsla(336, 86%, 56%, 1);
+
+$info-button-color-text-active: $info-button-color-text;
+$info-button-color-bg-active: $info-button-color-bg-hover;
+$info-button-color-border-active: $info-button-color-border-hover;
+
+
+//-----Title-----//
+$h1-font-size: 2.5em;
+$h1-line-height: 1.25;
+$h1-margin-top: $h1-font-size / 2;
+$h1-margin-bottom: $h1-font-size / 2;
+
+$h2-font-size: 1.875rem;
+$h2-line-height: $base-line-height;
+$h2-margin-top: $h2-font-size * .83;
+$h2-margin-bottom: $h2-font-size * .83;
+
+$h3-font-size: 1.563rem;
+$h3-line-height: $base-line-height;
+$h3-margin-top: $h3-font-size / 1.5;
+$h3-margin-bottom: $h3-font-size / 1.5;
+
+$h4-font-size: 1.375rem;
+$h4-line-height: $base-line-height;
+$h4-margin-top: $h4-font-size / 1.5;
+$h4-margin-bottom: $h4-font-size / 1.5;
+
+$h5-font-size: 1.25rem;
+$h5-line-height: 1;
+$h5-margin-top: $h5-font-size / 2;
+$h5-margin-bottom: $h5-font-size / 2;
+
+// Form
+$form-field-font-family: $font-family-sans-serif;
+$form-field-font-size: $font-size-small;
+$form-field-height: 2.5rem;
+$form-field-padding: .6875rem;
+$form-field-padding-y: .6875rem;
+$form-field-padding-x: .6875rem;
+$field-focus-color: $pink-color;
+$field-success-color: $green-color;
+$field-warning-color: $purple-color;
+$field-error-color: $error-color;
+
+// Icons
+$icon-caret-right: '\e601';
+$icon-box: '\e602';
+$icon-ca: '\e603';
+$icon-diesel: '\e604';
+$icon-ducati: '\e605';
+$icon-google: '\e606';
+$icon-layers: '\e607';
+$icon-kiehls: '\e608';
+$icon-linkedin: '\e609';
+$icon-bridge: '\e60a';
+$icon-michelin: '\e60b';
+$icon-play: '\e600';
+$icon-scoopit: '\e60d';
+$icon-solocal: '\e60e';
+$icon-twitter: '\e60f';
+$icon-youtube: '\e610';
