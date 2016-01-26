@@ -63,11 +63,11 @@ p, .copy {
 
 hr {
     border-bottom: 1px solid rgba($copy-color, 0.1);
-    margin: 0 auto 27px;
+    margin: 0 auto 21px;
     width: 40%;
 
     @include queries($md) {
-        margin-bottom: 35px;
+        margin-bottom: 27px;
     }
 }
 

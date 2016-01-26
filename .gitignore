@@ -6,7 +6,6 @@ faviconData.json
 secret.json
 var.sublime-project
 var.sublime-workspace
-
 .csscomb.json
-
 .jsbeautifyrc
+faviconData.json
