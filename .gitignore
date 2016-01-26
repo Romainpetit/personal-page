@@ -2,6 +2,7 @@ node_modules/
 .publish/
 dist/
 .DS_Store
+faviconData.json
 secret.json
 var.sublime-project
 var.sublime-workspace

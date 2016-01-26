@@ -430,7 +430,7 @@ gulp.task('deploy', ['default'], function() {
 });
 
 
-gulp.task( 'deploy-ftp', function () {
+gulp.task( 'deploy-ftp', ['deploy'], function () {
 
 
     var conn = ftp.create( {
