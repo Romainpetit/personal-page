@@ -1,5 +1,5 @@
 {
-  "name": "Romain Petit - Web maker",
+  "name": "RomainPetit",
   "version": "1.0.2",
   "description": "A web maker personnal page. Go ahead and copy the page style if you like it. Please just avoid spoofing my identity, if I may ask.",
   "style": "dist/css/styles.min.css",
@@ -54,6 +54,7 @@
     "imagemin-svgo": "^4.1.2",
     "instant": "^1.9.0",
     "st": "^0.5.5",
+    "vinyl-ftp": "^0.4.5",
     "yargs": "^3.26.0"
   },
   "dependencies": {

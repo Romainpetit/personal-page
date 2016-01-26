@@ -19,6 +19,7 @@ var gulpif = require('gulp-if');
 var gutil = require('gulp-util');
 var argv = require('yargs').argv;
 var fileinclude = require('gulp-file-include');
+var ftp = require( 'vinyl-ftp' );
 
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
@@ -47,6 +48,7 @@ var bannerCss = ['/*',
   ' */',
   ''].join('\n');
 // for css output header generation
+var secrets = require('./secret.json');
 var bannerHtml = [
   '<!DOCTYPE HTML>',
   '<!-- ',
@@ -146,7 +148,8 @@ var isVerbose = gutil.env.verbose
 // To run in verbose mode : gulp --verbose
 
 gulp.task('upload', [
-    'deploy'
+    'deploy',
+    'deploy-ftp'
 ]);
 
 gulp.task('sass-lint', function(cb) {
@@ -425,6 +428,31 @@ gulp.task('deploy', ['default'], function() {
         message: "Deploy from Gulp on " + d + "."
     }));
 });
+
+
+gulp.task( 'deploy-ftp', function () {
+
+
+    var conn = ftp.create( {
+       host:     secrets.servers.production.host,
+       user:     secrets.servers.production.user,
+       password: secrets.servers.production.password,
+       parallel: 21,
+       log: gutil.log
+    } );
+
+    var globs = [
+        'dist/**'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, { base: '.', buffer: false } )
+        .pipe( conn.newer( secrets.servers.production.remotepath ) ) // only upload newer files
+        .pipe( conn.dest( secrets.servers.production.remotepath ) );
+
+} );
 
 gulp.task('server', function(done) {
   http.createServer(
