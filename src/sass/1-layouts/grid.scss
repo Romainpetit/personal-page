@@ -11,10 +11,10 @@ $half-gutter-width: ($gutter-width / 2) !default;
 // Breakpoints definitions in em. Unit added afterwards for easier calculations
 $width-xs: 0 !default;   // Starting value
 $width-sm: 21 !default;  // 336px
-$width-md: 33 !default;  // 528px
+$width-md: 30 !default;  // 528px
 $width-lg: 50 !default;  // 800px
 $width-xl: 67 !default;  // 1072px
-$width-xxl: 88 !default; // 1408px
+$width-xxl: 82 !default; // 1408px
 
 // This breakpoint is used for the header only atm and does not generate breakpoint specific helper classes
 $custom-mobile: 28.125em;
@@ -35,7 +35,7 @@ $container-sm: 100% !default;
 $container-md: #{$width-md}em !default;
 $container-lg: #{$width-lg + 2}em !default;
 $container-xl: #{$width-xl - 8}em !default;
-$container-xxl: #{($width-xxl - 28)}rem !default;
+$container-xxl: #{($width-xxl - 22)}rem !default;
 
 // Containers padding for each breakpoint
 $container-xs-p: ($outer-margin / 2);
