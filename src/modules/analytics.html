@@ -1,0 +1,52 @@
+<!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47519414-1', {'siteSpeedSampleRate': 100});
+  ga('send', 'pageview');
+
+var bordeaux = document.getElementById('bordeaux');
+var leadformance = document.getElementById('leadformance');
+var leadformanceClients = document.getElementById('leadformance-clients');
+var github = document.getElementById('github');
+var linkedin = document.getElementById('linkedin');
+var email = document.getElementById('email');
+var twitter = document.getElementById('twitter');
+var emailConclusion = document.getElementById('email-conclusion');
+
+bordeaux.onclick = function(){
+    ga('send', 'event', 'Link', 'Check Bordeaux Localisation', 'Bordeaux Location');
+}
+
+leadformance.onclick = function(){
+    ga('send', 'event', 'Link', 'Visit Leadformance website', 'Leadformance');
+}
+
+leadformanceClients.onclick = function(){
+    ga('send', 'event', 'Link', 'Visit Leadformance clients', 'Leadformance Clients');
+}
+
+github.onclick = function(){
+    ga('send', 'event', 'Link', 'Visit Github profile', 'Github Profile');
+}
+
+linkedin.onclick = function(){
+    ga('send', 'event', 'Link', 'Visit Linkedin profile', 'Linkedin Profile');
+}
+
+email.onclick = function(){
+    ga('send', 'event', 'Link', 'Open email - body', 'Email body');
+}
+
+twitter.onclick = function(){
+    ga('send', 'event', 'Link', 'Visit Twitter profile', 'Twitter Profile');
+}
+
+emailConclusion.onclick = function(){
+    ga('send', 'event', 'Link', 'Open email - final', 'Email final');
+}
+
+</script>
