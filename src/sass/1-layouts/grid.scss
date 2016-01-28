@@ -12,35 +12,35 @@ $half-gutter-width: ($gutter-width / 2) !default;
 $width-xs: 0 !default;   // Starting value
 $width-sm: 21 !default;  // 336px
 $width-md: 30 !default;  // 528px
-$width-lg: 50 !default;  // 800px
+$width-lg: 48 !default;  // 800px
 $width-xl: 67 !default;  // 1072px
-$width-xxl: 82 !default; // 1408px
-
-// This breakpoint is used for the header only atm and does not generate breakpoint specific helper classes
-$custom-mobile: 28.125em;
-$custom-mobile-large: 675px;
-$custom-tablet: 755px;
+$width-xxl: 88 !default; // 1408px
 
 // Viewport width breakpoint, with unit
-$viewport-xs: #{$width-xs}em !default;
-$viewport-sm: #{$width-sm}em !default;
-$viewport-md: #{$width-md}em !default;
-$viewport-lg: #{$width-lg}em !default;
-$viewport-xl: #{$width-xl}em !default;
+$viewport-xs: #{$width-xs}rem !default;
+$viewport-sm: #{$width-sm}rem !default;
+$viewport-md: #{$width-md}rem !default;
+$viewport-lg: #{$width-lg}rem !default;
+$viewport-xl: #{$width-xl}rem !default;
 $viewport-xxl: #{$width-xxl}rem !default;
+
+// Viewport height breakpoint, with unit
+$viewport-v-xs: 31.25em !default;
+$viewport-v-sm: 37.5em !default;
 
 // Containers width for each breakpoint
 $container-xs: 100% !default;
 $container-sm: 100% !default;
-$container-md: #{$width-md}em !default;
-$container-lg: #{$width-lg + 2}em !default;
-$container-xl: #{$width-xl - 8}em !default;
+$container-md: 100% !default;
+$container-lg: #{$width-lg + 4}rem !default;
+$container-xl: #{$width-xl - 8}rem !default;
 $container-xxl: #{($width-xxl - 22)}rem !default;
+// or same like viwport here and double pasdding
 
 // Containers padding for each breakpoint
-$container-xs-p: ($outer-margin / 2);
-$container-sm-p: 3.75rem;
-$container-md-p: 6rem;
+$container-xs-p: ($outer-margin / 4);
+$container-sm-p: ($outer-margin / 2);
+$container-md-p: $outer-margin;
 $container-lg-p: $outer-margin;
 $container-xl-p: $outer-margin;
 $container-xxl-p: $outer-margin;
@@ -69,6 +69,7 @@ $default-query: $viewport-xs !default;
 // Putting breakpoint related values in arrays
 $sizes: $xs $sm $md $lg $xl $xxl !default;
 $queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}, #{$xl}:#{$viewport-xl}, #{$xxl}:#{$viewport-xxl}) !default;
+$queries-v: (#{$xs}:#{$viewport-v-xs}, #{$sm}:#{$viewport-v-sm}) !default;
 $fonts: (#{$xs}:#{$font-xs}, #{$sm}:#{$font-sm}, #{$md}:#{$font-md}, #{$lg}:#{$font-lg}, #{$xl}:#{$font-xl}, #{$xxl}:#{$font-xxl}) !default;
 $containers: (#{$xs}:#{$container-xs}, #{$sm}:#{$container-sm}, #{$md}:#{$container-md}, #{$lg}:#{$container-lg}, #{$xl}:#{$container-xl}, #{$xxl}:#{$container-xxl}) !default;
 $containers-p: (#{$xs}:#{$container-xs-p}, #{$sm}:#{$container-sm-p}, #{$md}:#{$container-md-p}, #{$lg}:#{$container-lg-p}, #{$xl}:#{$container-xl-p}, #{$xxl}:#{$container-xxl-p}) !default;
@@ -80,11 +81,6 @@ $offset-properties: 'margin-left' !default;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    margin: 2rem 0 4rem;
-
-    @include queries($md) {
-        margin: 4rem 0 8rem;
-    }
 }
 
 %container {

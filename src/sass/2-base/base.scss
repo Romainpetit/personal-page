@@ -96,6 +96,14 @@ blockquote {
     margin: 0;
 }
 
+.layout {
+    margin: 2rem 0 4rem;
+
+    @include queries($md) {
+        margin: 4rem 0 8rem;
+    }
+}
+
 .main-content {
     @for $i from 2 through 15 {
         & > *:nth-child(#{$i}) {
