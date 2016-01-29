@@ -47,7 +47,7 @@
 }
 
 .mt1 {
-    margin-top: $base-font-size / 2;
+    @include mt-base(1);
 }
 
 .mr1 {
@@ -55,7 +55,7 @@
 }
 
 .mb1 {
-    margin-bottom: $base-font-size / 2;
+    @include mb-base(1);
 }
 
 .ml1 {
@@ -67,7 +67,7 @@
 }
 
 .mt2 {
-    margin-top: $base-font-size;
+    @include mt-base(2);
 }
 
 .mr2 {
@@ -75,7 +75,7 @@
 }
 
 .mb2 {
-    margin-bottom: $base-font-size;
+    @include mb-base(2);
 }
 
 .ml2 {

@@ -58,6 +58,7 @@
     "yargs": "^3.26.0"
   },
   "dependencies": {
+    "bourbon": "^4.2.6",
     "gulp-if": "^1.2.5",
     "gulp-match": "^0.2.1",
     "livereload-js": "^2.2.2",

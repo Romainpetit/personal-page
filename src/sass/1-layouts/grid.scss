@@ -10,19 +10,44 @@ $half-gutter-width: ($gutter-width / 2) !default;
 
 // Breakpoints definitions in em. Unit added afterwards for easier calculations
 $width-xs: 0 !default;   // Starting value
-$width-sm: 21 !default;  // 336px
-$width-md: 30 !default;  // 528px
-$width-lg: 48 !default;  // 800px
-$width-xl: 67 !default;  // 1072px
-$width-xxl: 88 !default; // 1408px
+$width-sm: 336 !default;  // 336px
+$width-md: 540 !default;  // 528px
+$width-lg: 720 !default;  // 800px
+$width-xl: 1072 !default;  // 1072px
+$width-xxl: 1408 !default; // 1408px
+
+// Base font size factor for each breakpoint. REM metrics used everywhere else.
+$font-xs: 18px; // 12px
+$font-sm: 20px; // 14px
+$font-md: 22px; // 16px
+$font-lg: 22px; // 16px
+$font-xl: 24px; // 16px
+$font-xxl: 26px; // 18px
+
+$lineHeight-xs: 29px; // 12px
+$lineHeight-sm: 33px; // 14px
+$lineHeight-md: 36px; // 16px
+$lineHeight-lg: 36px; // 16px
+$lineHeight-xl: 39px; // 16px
+$lineHeight-xxl: 42px; // 18px
+
+$margin-xs: $lineHeight-xs;
+$margin-sm: $lineHeight-sm;
+$margin-md: $lineHeight-md;
+$margin-lg: $lineHeight-lg;
+$margin-xl: $lineHeight-xl;
+$margin-xxl: $lineHeight-xxl;
+
+$em-base: 22px;
+$modular-scale-ratio: $golden;
 
 // Viewport width breakpoint, with unit
-$viewport-xs: #{$width-xs}rem !default;
-$viewport-sm: #{$width-sm}rem !default;
-$viewport-md: #{$width-md}rem !default;
-$viewport-lg: #{$width-lg}rem !default;
-$viewport-xl: #{$width-xl}rem !default;
-$viewport-xxl: #{$width-xxl}rem !default;
+$viewport-xs: #{$width-xs}px !default;
+$viewport-sm: #{$width-sm}px !default;
+$viewport-md: #{$width-md}px !default;
+$viewport-lg: #{$width-lg}px !default;
+$viewport-xl: #{$width-xl}px !default;
+$viewport-xxl: #{$width-xxl}px !default;
 
 // Viewport height breakpoint, with unit
 $viewport-v-xs: 31.25em !default;
@@ -32,26 +57,17 @@ $viewport-v-sm: 37.5em !default;
 $container-xs: 100% !default;
 $container-sm: 100% !default;
 $container-md: 100% !default;
-$container-lg: #{$width-lg + 4}rem !default;
-$container-xl: #{$width-xl - 8}rem !default;
-$container-xxl: #{($width-xxl - 22)}rem !default;
-// or same like viwport here and double pasdding
+$container-lg: 61.8033% !default;
+$container-xl: 61.8033% !default;
+$container-xxl: 61.8033% !default;
 
 // Containers padding for each breakpoint
-$container-xs-p: ($outer-margin / 4);
-$container-sm-p: ($outer-margin / 2);
-$container-md-p: $outer-margin;
-$container-lg-p: $outer-margin;
-$container-xl-p: $outer-margin;
-$container-xxl-p: $outer-margin;
-
-// Base font size factor for each breakpoint. REM metrics used everywhere else.
-$font-xs: 75%; // 12px
-$font-sm: 75%; // 14px
-$font-md: 87.5%; // 16px
-$font-lg: 87.5%; // 16px
-$font-xl: 87.5%; // 16px
-$font-xxl: 100%; // 18px
+$container-xs-p: $margin-xs;
+$container-sm-p: $margin-sm;
+$container-md-p: ($margin-md * 2);
+$container-lg-p: 0;
+$container-xl-p: 0;
+$container-xxl-p: 0;
 
 // Breakpoints namespace
 $xs: 'xs' !default;
@@ -68,14 +84,95 @@ $default-query: $viewport-xs !default;
 
 // Putting breakpoint related values in arrays
 $sizes: $xs $sm $md $lg $xl $xxl !default;
-$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}, #{$xl}:#{$viewport-xl}, #{$xxl}:#{$viewport-xxl}) !default;
-$queries-v: (#{$xs}:#{$viewport-v-xs}, #{$sm}:#{$viewport-v-sm}) !default;
-$fonts: (#{$xs}:#{$font-xs}, #{$sm}:#{$font-sm}, #{$md}:#{$font-md}, #{$lg}:#{$font-lg}, #{$xl}:#{$font-xl}, #{$xxl}:#{$font-xxl}) !default;
-$containers: (#{$xs}:#{$container-xs}, #{$sm}:#{$container-sm}, #{$md}:#{$container-md}, #{$lg}:#{$container-lg}, #{$xl}:#{$container-xl}, #{$xxl}:#{$container-xxl}) !default;
-$containers-p: (#{$xs}:#{$container-xs-p}, #{$sm}:#{$container-sm-p}, #{$md}:#{$container-md-p}, #{$lg}:#{$container-lg-p}, #{$xl}:#{$container-xl-p}, #{$xxl}:#{$container-xxl-p}) !default;
+$queries: (
+    #{$xs}:#{$viewport-xs},
+    #{$sm}:#{$viewport-sm},
+    #{$md}:#{$viewport-md},
+    #{$lg}:#{$viewport-lg},
+    #{$xl}:#{$viewport-xl},
+    #{$xxl}:#{$viewport-xxl}) !default;
+$queries-v: (
+    #{$xs}:#{$viewport-v-xs},
+    #{$sm}:#{$viewport-v-sm}) !default;
+$fonts: (
+    #{$xs}:#{$font-xs},
+    #{$sm}:#{$font-sm},
+    #{$md}:#{$font-md},
+    #{$lg}:#{$font-lg},
+    #{$xl}:#{$font-xl},
+    #{$xxl}:#{$font-xxl}) !default;
+$lineHeights: (
+    #{$xs}:#{$lineHeight-xs},
+    #{$sm}:#{$lineHeight-sm},
+    #{$md}:#{$lineHeight-md},
+    #{$lg}:#{$lineHeight-lg},
+    #{$xl}:#{$lineHeight-xl},
+    #{$xxl}:#{$lineHeight-xxl}) !default;
+$containers: (
+    #{$xs}:#{$container-xs},
+    #{$sm}:#{$container-sm},
+    #{$md}:#{$container-md},
+    #{$lg}:#{$container-lg},
+    #{$xl}:#{$container-xl},
+    #{$xxl}:#{$container-xxl}) !default;
+$containers-p: (
+    #{$xs}:#{$container-xs-p},
+    #{$sm}:#{$container-sm-p},
+    #{$md}:#{$container-md-p},
+    #{$lg}:#{$container-lg-p},
+    #{$xl}:#{$container-xl-p},
+    #{$xxl}:#{$container-xxl-p}) !default;
 $column-properties: 'flex-basis',
                     'max-width' !default;
 $offset-properties: 'margin-left' !default;
+
+@mixin mt-base($multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($lineHeights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            margin-top: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin base($property, $multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($lineHeights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            #{$property}: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin mb-base($multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($lineHeights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            margin-bottom: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin lh-base($multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($lineHeights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            line-height: $total;
+            // @return $value;
+        }
+    }
+}
 
 .layout {
     display: flex;

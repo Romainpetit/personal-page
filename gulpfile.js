@@ -270,7 +270,9 @@ gulp.task('move-fonts', ['images-svg'], function(cb) {
 
 gulp.task('sass', ['move-fonts'], function(cb) {
     return gulp.src('src/sass/*.scss')
+
         .pipe(sass({
+            includePaths: require('node-bourbon').includePaths,
             errLogToConsole: true
         }))
         .on('error', notify.onError(function (error) {
