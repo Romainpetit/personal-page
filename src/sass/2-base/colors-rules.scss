@@ -126,7 +126,28 @@
     &-main {
         @include selection($dark-purple-color, $bg-grey);
         background-color: $bg-main;
-        color: $light-grey-color;
+        background: linear-gradient(to right,
+        rgba($main-color, 1) 0%,
+        rgba($main-color, .75) 40%,
+        rgba($main-color, .75) 60%,
+        rgba($main-color, 1) 100%);
+
+        // background: linear-gradient(250deg, rgba($main-color, .75), $main-color);
+        background-size: 400% 400%;
+        border-bottom-color: $main-color;
+
+        animation: flow 30s ease infinite;
+        color: $white-color;
+
+        a {
+            color: $white-color;
+            font-weight: $font-weight-medium;
+            text-shadow: none;
+
+            &:hover {
+                border-bottom-color: rgba($white-color, .5);
+            }
+        }
 
         .button {
             color: currentColor;
