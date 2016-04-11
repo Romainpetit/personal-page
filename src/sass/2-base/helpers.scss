@@ -13,7 +13,7 @@
     &:before {
         content: '';
         width: 100%;
-        @include base(height, .5);
+        @include base(height, .1);
 
         background-color: $main-color;
         top: 0;
