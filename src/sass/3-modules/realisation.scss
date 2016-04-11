@@ -1,0 +1,52 @@
+.realisation {
+    @include base(padding-top, 1);
+    @include base(padding-bottom, 1);
+    @include base(padding-left, 1);
+    @include base(padding-right, 1);
+    display: block;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $grey-color;
+    color: white;
+    text-shadow: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background: linear-gradient(to top, rgba($main-color, .75) 0%, rgba($main-color, .75) 50%, $main-color 100%);
+    background-size: 200%;
+    background-position: bottom;
+    transition: background-position .12s ease;
+
+    &:hover {
+        color: white;
+        background-position: top;
+
+        .realisation-description {
+        }
+
+        .realisation-title {
+        }
+    }
+
+    &-title {
+        font-family: $font-family-sans-serif;
+        z-index: 1;
+        text-align: center;
+        @include base(padding-top, 1);
+    }
+
+    &-description {
+        display: block;
+        text-align: center;
+        @include base(padding-bottom, 1);
+    }
+
+    &-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        opacity: .15;
+    }
+}
