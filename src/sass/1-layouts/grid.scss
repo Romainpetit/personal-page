@@ -1,6 +1,7 @@
 $column-count: 12 !default;
 $column-selector: '.col' !default;
 $container-selector: '.container' !default;
+$fluid-container-selector: '.container-fluid' !default;
 $font-selector: ':root' !default;
 $offset-modifier: 'offset' !default;
 $gutter-width: 1rem !default;
@@ -61,6 +62,14 @@ $container-lg: 61.8033% !default;
 $container-xl: 61.8033% !default;
 $container-xxl: 61.8033% !default;
 
+// Fluid containers padding for each breakpoint
+$fluid-container-xs-p: 0;
+$fluid-container-sm-p: 0;
+$fluid-container-md-p: $margin-md;
+$fluid-container-lg-p: $margin-lg;
+$fluid-container-xl-p: $margin-xl;
+$fluid-container-xxl-p: $margin-xxl;
+
 // Containers padding for each breakpoint
 $container-xs-p: $margin-xs;
 $container-sm-p: $margin-sm;
@@ -115,6 +124,13 @@ $containers: (
     #{$lg}:#{$container-lg},
     #{$xl}:#{$container-xl},
     #{$xxl}:#{$container-xxl}) !default;
+$fluid-containers-p: (
+    #{$xs}:#{$fluid-container-xs-p},
+    #{$sm}:#{$fluid-container-sm-p},
+    #{$md}:#{$fluid-container-md-p},
+    #{$lg}:#{$fluid-container-lg-p},
+    #{$xl}:#{$fluid-container-xl-p},
+    #{$xxl}:#{$fluid-container-xxl-p}) !default;
 $containers-p: (
     #{$xs}:#{$container-xs-p},
     #{$sm}:#{$container-sm-p},
@@ -187,6 +203,7 @@ $offset-properties: 'margin-left' !default;
 }
 
 @include containers();
+@include fluid-containers();
 @include fonts();
 
 .row {

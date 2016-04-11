@@ -46,6 +46,22 @@
     }
 }
 
+@mixin fluid-containers($selector: $fluid-container-selector, $queries: $queries) {
+    @each $size in $sizes {
+        $query: map-get($containers, $size);
+        $query-p: map-get($fluid-containers-p, $size);
+
+        @include queries($size, $queries) {
+            #{$selector} {
+                @extend %container;
+                padding-right: #{$query-p};
+                padding-left: #{$query-p};
+                width: 100%;
+            }
+        }
+    }
+}
+
 @mixin fonts($selector: $font-selector, $queries: $queries) {
     @each $size in $sizes {
         $query: map-get($fonts, $size);
