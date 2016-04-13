@@ -70,4 +70,13 @@
     &-1 {
         @include title-h5;
     }
+
+    &-uppercase {
+        font-family: $font-family-sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #B3BEC1;
+        font-size: 14px;
+    }
 }
+
