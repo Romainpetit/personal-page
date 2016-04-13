@@ -39,7 +39,7 @@ img {
 a {
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    border-bottom-color: rgba($main-color, .75);
+    border-bottom-color: rgba($main-color, .5);
     color: $darker-black-color;
     text-shadow: $white-color 0.5px 0.5px,
                 $white-color -0.5px 0.5px,
@@ -75,9 +75,12 @@ a {
                 $white-color -1px 2.5px,
                 $white-color 1px 2px,
                 $white-color -1px 2px;
+    transition: color .15s ease-in-out,
+                border-bottom-color .15s ease-in-out;
 
     &:hover {
-        color: $main-color;
+        color: $main-sat-color;
+        border-bottom-color: rgba($main-color, .25);
     }
 }
 
