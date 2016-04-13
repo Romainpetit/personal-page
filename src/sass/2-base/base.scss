@@ -130,9 +130,8 @@ blockquote {
 }
 
 .layout {
-    @include base(padding-top, 1);
-    @include base(padding-bottom, 1);
     position: relative;
+    @include base(padding-bottom, 1);
     background-image: url(http://basehold.it/i/29/);
 
     @include queries($sm) {
@@ -141,7 +140,6 @@ blockquote {
     }
 
     @include queries($md) {
-        @include base(padding-top, 3);
         @include base(padding-bottom, 6);
         background-image: url(http://basehold.it/i/36/);
     }

@@ -47,6 +47,16 @@
     @include base(line-height, $lh);
     font-size: $h5-font-size;
     font-weight: $font-weight-medium;
+    text-align: center;
+    color: $white-color;
+
+    @include queries($sm) {
+        @include base(margin-top, 4);
+    }
+
+    @include queries($md) {
+        @include base(margin-top, 5);
+    }
 }
 
 .title {

@@ -8,30 +8,6 @@
     padding-bottom: $box-bottom-padding;
 }
 
-.gradient-top {
-
-    &:before {
-        content: '';
-        width: 100%;
-        @include base(height, .1);
-
-        background-color: $main-color;
-        top: 0;
-        position: absolute;
-
-        background: linear-gradient(250deg, rgba($main-color, .75), $main-color);
-        background-size: 400% 400%;
-
-        animation: flow 10s ease infinite;
-
-        @keyframes flow {
-            0%{background-position:0% 57%}
-            50%{background-position:100% 44%}
-            100%{background-position:0% 57%}
-        }
-    }
-}
-
 .bold {
     font-weight: $font-weight-bold;
 }
