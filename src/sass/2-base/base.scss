@@ -171,3 +171,81 @@ blockquote {
 #layout.off {
     background-image: none !important;
 }
+
+#mc_embed_signup {
+    text-align: center;
+
+    label {
+        @include base(font-size, .25);
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $font-family-sans-serif;
+    }
+}
+
+#mce-EMAIL {
+    @include base(border-radius, .5);
+    @include base(margin, .5);
+    @include base(margin-top, 0);
+    @include base(margin-left, 0);
+    @include base(margin-right, 0);
+    @include base(padding-top, .25);
+    @include base(padding-bottom, .25);
+    @include base(padding-left, .25);
+    @include base(padding-right, .25);
+    transition: background-color .15s ease-in-out,
+                border-color .15s ease-in-out;
+    border: 1px solid rgba($white-color, .8);
+    background-color: rgba($white-color, 0);
+    width: 100%;
+    text-align: center;
+
+    @include queries($md) {
+        @include base(margin, .5);
+        @include base(margin-top, 0);
+        @include base(padding-left, 1);
+        @include base(padding-right, 1);
+        width: 80%;
+    }
+
+    @include queries($lg) {
+        width: 70%;
+    }
+
+    &:hover {
+        border-color: rgba($white-color, 1);
+    }
+
+    &:active,
+    &:focus {
+        border-color: rgba($white-color, .7);
+    }
+}
+
+#mc-embedded-subscribe {
+    @include base(font-size, .5);
+    @include base(border-radius, .5);
+    @include base(padding-top, .25);
+    @include base(padding-bottom, .25);
+    @include base(padding-left, 1);
+    @include base(padding-right, 1);
+    @include base(margin-bottom, .5);
+    transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
+    background-color: rgba($white-color, 1);
+    margin-top: -2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $main-sat-color;
+    font-family: $font-family-sans-serif;
+
+    &:hover {
+        transform: scale(1.08);
+    }
+
+    &:hover:active,
+    &:active {
+        transform: scale(.95);
+    }
+}
