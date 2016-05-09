@@ -4,46 +4,41 @@
     @include base(padding-left, 1);
     @include base(padding-right, 1);
     display: block;
-    color: $white-color;
-    text-shadow: 0px 0px 6px $main-sat-color;
     position: relative;
-    overflow: hidden;
+    transition: background-position .15s ease-in-out;
     z-index: 0;
     background: linear-gradient(to top, $main-color 0%, $main-color 50%, $main-sat-color 100%);
-    background-size: 200%;
     background-position: bottom;
-    transition: background-position .15s ease-in-out;
+    background-size: 200%;
+    overflow: hidden;
+    text-shadow: 0 0 6px $main-sat-color;
+    color: $white-color;
+    border-bottom-width: 0;
 
     &:hover {
-        color: $white-color;
         background-position: top;
-
-        .realisation-description {
-        }
-
-        .realisation-title {
-        }
+        color: $white-color;
     }
 
     &-title {
-        font-family: $font-family-sans-serif;
+        @include base(padding-top, 1);
         z-index: 1;
         text-align: center;
-        @include base(padding-top, 1);
+        font-family: $font-family-sans-serif;
     }
 
     &-description {
+        @include base(padding-bottom, 1);
         display: block;
         text-align: center;
-        @include base(padding-bottom, 1);
     }
 
     &-image {
         position: absolute;
-        right: 0;
         top: 0;
-        width: 100%;
-        z-index: -1;
+        right: 0;
         opacity: .15;
+        z-index: -1;
+        width: 100%;
     }
 }

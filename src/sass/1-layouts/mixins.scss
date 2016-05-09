@@ -65,12 +65,12 @@
 @mixin fonts($selector: $font-selector, $queries: $queries) {
     @each $size in $sizes {
         $query: map-get($fonts, $size);
-        $base: map-get($lineHeights, $size);
+        $base: map-get($line-heights, $size);
 
         @include queries($size, $queries) {
             #{$selector} {
-                font-size: #{$query};
                 line-height: #{$base};
+                font-size: #{$query};
             }
         }
     }

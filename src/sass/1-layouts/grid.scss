@@ -25,19 +25,19 @@ $font-lg: 22px; // 16px
 $font-xl: 24px; // 16px
 $font-xxl: 26px; // 18px
 
-$lineHeight-xs: 29px; // 12px
-$lineHeight-sm: 33px; // 14px
-$lineHeight-md: 36px; // 16px
-$lineHeight-lg: 36px; // 16px
-$lineHeight-xl: 39px; // 16px
-$lineHeight-xxl: 42px; // 18px
+$line-height-xs: 29px; // 12px
+$line-height-sm: 33px; // 14px
+$line-height-md: 36px; // 16px
+$line-height-lg: 36px; // 16px
+$line-height-xl: 39px; // 16px
+$line-height-xxl: 42px; // 18px
 
-$margin-xs: $lineHeight-xs;
-$margin-sm: $lineHeight-sm;
-$margin-md: $lineHeight-md;
-$margin-lg: $lineHeight-lg;
-$margin-xl: $lineHeight-xl;
-$margin-xxl: $lineHeight-xxl;
+$margin-xs: $line-height-xs;
+$margin-sm: $line-height-sm;
+$margin-md: $line-height-md;
+$margin-lg: $line-height-lg;
+$margin-xl: $line-height-xl;
+$margin-xxl: $line-height-xxl;
 
 $em-base: 22px;
 $modular-scale-ratio: $golden;
@@ -110,13 +110,13 @@ $fonts: (
     #{$lg}:#{$font-lg},
     #{$xl}:#{$font-xl},
     #{$xxl}:#{$font-xxl}) !default;
-$lineHeights: (
-    #{$xs}:#{$lineHeight-xs},
-    #{$sm}:#{$lineHeight-sm},
-    #{$md}:#{$lineHeight-md},
-    #{$lg}:#{$lineHeight-lg},
-    #{$xl}:#{$lineHeight-xl},
-    #{$xxl}:#{$lineHeight-xxl}) !default;
+$line-heights: (
+    #{$xs}:#{$line-height-xs},
+    #{$sm}:#{$line-height-sm},
+    #{$md}:#{$line-height-md},
+    #{$lg}:#{$line-height-lg},
+    #{$xl}:#{$line-height-xl},
+    #{$xxl}:#{$line-height-xxl}) !default;
 $containers: (
     #{$xs}:#{$container-xs},
     #{$sm}:#{$container-sm},
@@ -144,7 +144,7 @@ $offset-properties: 'margin-left' !default;
 
 @mixin mt-base($multiplier, $queries: $queries) {
     @each $size in $sizes {
-        $base: map-get($lineHeights, $size);
+        $base: map-get($line-heights, $size);
 
         @include queries($size, $queries) {
             $total: ($multiplier * $base);
@@ -156,7 +156,7 @@ $offset-properties: 'margin-left' !default;
 
 @mixin base($property, $multiplier, $queries: $queries) {
     @each $size in $sizes {
-        $base: map-get($lineHeights, $size);
+        $base: map-get($line-heights, $size);
 
         @include queries($size, $queries) {
             $total: ($multiplier * $base);
@@ -168,7 +168,7 @@ $offset-properties: 'margin-left' !default;
 
 @mixin mb-base($multiplier, $queries: $queries) {
     @each $size in $sizes {
-        $base: map-get($lineHeights, $size);
+        $base: map-get($line-heights, $size);
 
         @include queries($size, $queries) {
             $total: ($multiplier * $base);
@@ -180,7 +180,7 @@ $offset-properties: 'margin-left' !default;
 
 @mixin lh-base($multiplier, $queries: $queries) {
     @each $size in $sizes {
-        $base: map-get($lineHeights, $size);
+        $base: map-get($line-heights, $size);
 
         @include queries($size, $queries) {
             $total: ($multiplier * $base);

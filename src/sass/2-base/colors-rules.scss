@@ -108,7 +108,7 @@
     }
 
     &-white {
-        @include selection(rgba($main-color, 0.75), $bg-white);
+        @include selection(rgba($main-color, .75), $bg-white);
         background-color: $bg-white;
         color: $black-color;
     }
@@ -125,31 +125,27 @@
 
     &-main {
         @include selection($dark-purple-color, $bg-grey);
-        background-color: $bg-main;
+        animation: flow 15s ease infinite;
         background: linear-gradient(to right,
         rgba($main-color, 1) 0%,
         rgba($main-sat-color, 1) 45%,
         rgba($main-sat-color, 1) 55%,
         rgba($main-color, 1) 100%);
-
-        // background: linear-gradient(250deg, rgba($main-color, .75), $main-color);
+        background-color: $bg-main;
         background-size: 400% 400%;
-
-        animation: flow 15s ease infinite;
-
-        @keyframes flow {
-            0%{background-position:0% 57%}
-            50%{background-position:100% 44%}
-            100%{background-position:0% 57%}
-        }
-
         color: $white-color;
 
+        @keyframes flow {
+            0% { background-position: 0% 57%; }
+            50% { background-position: 100% 44%; }
+            100% { background-position: 0% 57%; }
+        }
+
         a {
+            border-bottom-color: rgba($white-color, .4);
+            text-shadow: none;
             color: $white-color;
             font-weight: $font-weight-medium;
-            text-shadow: none;
-            border-bottom-color: rgba($white-color, .4);
 
             &:hover {
                 border-bottom-color: rgba($white-color, 1);

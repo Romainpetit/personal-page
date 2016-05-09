@@ -3,6 +3,9 @@
 }
 
 body {
+    //scss-lint:disable VendorPrefix
+    //scss-lint:disable PropertySortOrder
+
     margin: 0;
     background: $base-background-color;
     padding: 0;
@@ -23,6 +26,9 @@ body {
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
 
+    //scss-lint:enable VendorPrefix
+    //scss-lint:enable PropertySortOrder
+
     box-sizing: border-box;
     word-break: break-word;
 }
@@ -37,12 +43,12 @@ img {
 }
 
 a {
+    transition: color .15s ease-in-out,
+                border-bottom-color .15s ease-in-out;
+    border-bottom: 1px solid rgba($main-color, .5);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    border-bottom-color: rgba($main-color, .5);
-    color: $darker-black-color;
-    text-shadow: $white-color 0.5px 0.5px,
-                $white-color -0.5px 0.5px,
+    text-shadow: $white-color .5px .5px,
+                $white-color -.5px .5px,
                 $white-color 1px 1px,
                 $white-color -1px 1px,
                 $white-color 1.5px 1.5px,
@@ -59,12 +65,12 @@ a {
                 $white-color -3px 3px,
                 $white-color 2.5px 3px,
                 $white-color -2.5px 3px,
-                $white-color 0px 0.5px,
-                $white-color 0px 1px,
-                $white-color 0px 1.5px,
-                $white-color 0px 2px,
-                $white-color 0px 2.5px,
-                $white-color 0px 3px,
+                $white-color 0 .5px,
+                $white-color 0 1px,
+                $white-color 0 1.5px,
+                $white-color 0 2px,
+                $white-color 0 2.5px,
+                $white-color 0 3px,
                 $white-color 1px 4px,
                 $white-color -1px 4px,
                 $white-color 1px 3.5px,
@@ -75,43 +81,39 @@ a {
                 $white-color -1px 2.5px,
                 $white-color 1px 2px,
                 $white-color -1px 2px;
-    transition: color .15s ease-in-out,
-                border-bottom-color .15s ease-in-out;
+    color: $darker-black-color;
 
     &:hover {
-        color: $main-sat-color;
         border-bottom-color: rgba($main-color, .25);
+        color: $main-sat-color;
     }
 }
 
-p, .copy {
+p,
+.copy {
     @include mb-base(1);
-
     font-weight: $font-weight-book;
 }
 
 hr {
-    position: relative;
     @include base(height, 1);
+    position: relative;
     margin: 0 auto;
     width: 40%;
 
     &:before {
-        height: 0px;
-        top: -1px;
         position: absolute;
-        content: '';
-        width: 100%;
+        top: -1px;
+        animation: flow 1s ease infinite;
         background: linear-gradient(to right,
             rgba($main-color, 1) 0%,
             rgba($main-color, .75) 40%,
             rgba($main-color, .75) 60%,
             rgba($main-color, 1) 100%);
-
-        // background: linear-gradient(250deg, rgba($main-color, .75), $main-color);
         background-size: 400% 400%;
-
-        animation: flow 1s ease infinite;
+        width: 100%;
+        height: 0;
+        content: '';
     }
 }
 
@@ -133,39 +135,39 @@ blockquote {
 }
 
 .layout {
-    position: relative;
     @include base(padding-bottom, 1);
-    background-image: url(http://basehold.it/i/29/);
+    position: relative;
+    background-image: url('http://basehold.it/i/29/');
 
     @include queries($sm) {
-        @include base(padding-bottom, 4);
-        background-image: url(http://basehold.it/i/33/);
+        @include base(padding-bottom, 2);
+        background-image: url('http://basehold.it/i/33/');
     }
 
     @include queries($md) {
-        @include base(padding-bottom, 6);
-        background-image: url(http://basehold.it/i/36/);
+        @include base(padding-bottom, 4);
+        background-image: url('http://basehold.it/i/36/');
     }
 
     @include queries($xl) {
-        background-image: url(http://basehold.it/i/39/);
+        background-image: url('http://basehold.it/i/39/');
     }
 
     @include queries($xxl) {
-        background-image: url(http://basehold.it/i/42/);
+        background-image: url('http://basehold.it/i/42/');
     }
 
 }
 
 .main-content {
-    & > * {
+    > * {
         animation: fadein 1s ease-in-out;
     }
 }
 
 @keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to { opacity: 1; }
 }
 
 #layout.off {
