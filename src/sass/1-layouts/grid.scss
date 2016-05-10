@@ -154,18 +154,6 @@ $offset-properties: 'margin-left' !default;
     }
 }
 
-@mixin base($property, $multiplier, $queries: $queries) {
-    @each $size in $sizes {
-        $base: map-get($line-heights, $size);
-
-        @include queries($size, $queries) {
-            $total: ($multiplier * $base);
-            #{$property}: $total;
-            // @return $value;
-        }
-    }
-}
-
 @mixin mb-base($multiplier, $queries: $queries) {
     @each $size in $sizes {
         $base: map-get($line-heights, $size);
@@ -173,6 +161,42 @@ $offset-properties: 'margin-left' !default;
         @include queries($size, $queries) {
             $total: ($multiplier * $base);
             margin-bottom: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin pt-base($multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($line-heights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            padding-top: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin pb-base($multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($line-heights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            padding-bottom: $total;
+            // @return $value;
+        }
+    }
+}
+
+@mixin base($property, $multiplier, $queries: $queries) {
+    @each $size in $sizes {
+        $base: map-get($line-heights, $size);
+
+        @include queries($size, $queries) {
+            $total: ($multiplier * $base);
+            #{$property}: $total;
             // @return $value;
         }
     }

@@ -234,8 +234,8 @@ blockquote {
     @include base(padding-right, 1);
     @include base(margin-bottom, .5);
     transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
-    background-color: rgba($white-color, 1);
     margin-top: -2px;
+    background-color: rgba($white-color, 1);
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -249,5 +249,26 @@ blockquote {
     &:hover:active,
     &:active {
         transform: scale(.95);
+    }
+}
+
+#subscribe-result {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: fadein .2s ease-in-out;
+    width: 100%;
+    text-align: center;
+
+    &.success {
+        background: $green-color;
+    }
+
+    &.loading {
+        background: $main-color;
+    }
+
+    &.fail {
+        background: $red-color;
     }
 }

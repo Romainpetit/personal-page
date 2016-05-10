@@ -7,13 +7,13 @@
     position: relative;
     transition: background-position .15s ease-in-out;
     z-index: 0;
+    border-bottom-width: 0;
     background: linear-gradient(to top, $main-color 0%, $main-color 50%, $main-sat-color 100%);
     background-position: bottom;
     background-size: 200%;
     overflow: hidden;
     text-shadow: 0 0 6px $main-sat-color;
     color: $white-color;
-    border-bottom-width: 0;
 
     &:hover {
         background-position: top;
