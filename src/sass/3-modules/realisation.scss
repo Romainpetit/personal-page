@@ -7,7 +7,7 @@
     position: relative;
     transition: background-position .15s ease-in-out;
     z-index: 0;
-    border-bottom-width: 0;
+    text-decoration: none;
     background: linear-gradient(to top, $main-color 0%, $main-color 50%, $main-sat-color 100%);
     background-position: bottom;
     background-size: 200%;
@@ -17,6 +17,7 @@
 
     &:hover {
         background-position: top;
+        text-shadow: 0 0 6px $main-sat-color;
         color: $white-color;
     }
 
@@ -25,6 +26,10 @@
         z-index: 1;
         text-align: center;
         font-family: $font-family-sans-serif;
+
+        .realisation:hover & {
+            text-decoration: underline;
+        }
     }
 
     &-description {
