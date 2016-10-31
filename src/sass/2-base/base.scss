@@ -211,8 +211,9 @@ blockquote {
     @include base(padding-right, .25);
     transition: background-color .15s ease-in-out,
                 border-color .15s ease-in-out;
-    border: 1px solid rgba($white-color, .8);
-    background-color: rgba($white-color, 0);
+    border: 1px solid rgba($white-color, 0);
+    background-color: rgba($white-color, .8);
+    color: $copy-color;
     width: 100%;
     text-align: center;
 
@@ -234,15 +235,16 @@ blockquote {
 
     &:active,
     &:focus {
-        border-color: rgba($white-color, .7);
+        border-color: rgba($white-color, 1);
+        background-color: rgba($white-color, 1);
     }
 }
 
 #mc-embedded-subscribe {
     @include base(font-size, .5);
     @include base(border-radius, .5);
-    @include base(padding-top, .25);
-    @include base(padding-bottom, .25);
+    @include base(padding-top, .27);
+    @include base(padding-bottom, .23);
     @include base(padding-left, 1);
     @include base(padding-right, 1);
     @include base(margin-bottom, .5);
@@ -255,7 +257,8 @@ blockquote {
     color: $main-sat-color;
     font-family: $font-family-sans-serif;
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: scale(1.08);
     }
 
