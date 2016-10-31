@@ -45,6 +45,15 @@ img {
 a {
     transition: color .15s ease-in-out,
                 border-bottom-color .15s ease-in-out;
+    .icon {
+        fill : $copy-color;
+    }
+
+    &:hover {
+        .icon {
+            fill : $main-color;
+        }
+    }
     border-bottom: 1px solid rgba($main-color, .5);
     text-decoration: none;
     text-shadow: $white-color .5px .5px,
