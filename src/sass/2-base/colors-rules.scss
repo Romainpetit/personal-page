@@ -125,7 +125,6 @@
 
     &-main {
         @include selection($dark-purple-color, $bg-grey);
-        animation: flow 15s ease infinite;
         background: linear-gradient(to right,
         rgba($main-color, 1) 0%,
         rgba($main-sat-color, 1) 45%,
@@ -134,12 +133,6 @@
         background-color: $bg-main;
         background-size: 400% 400%;
         color: $white-color;
-
-        @keyframes flow {
-            0% { background-position: 0% 57%; }
-            50% { background-position: 100% 44%; }
-            100% { background-position: 0% 57%; }
-        }
 
         a {
             border-bottom-color: rgba($white-color, .4);
