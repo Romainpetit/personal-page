@@ -43,8 +43,6 @@ img {
 }
 
 a {
-    transition: color .15s ease-in-out,
-                border-bottom-color .15s ease-in-out;
     .icon {
         fill : $copy-color;
     }
@@ -54,6 +52,9 @@ a {
             fill : $main-color;
         }
     }
+}
+
+.link {
     border-bottom: 1px solid rgba($main-color, .5);
     text-decoration: none;
     text-shadow: $white-color .5px .5px,
@@ -92,9 +93,12 @@ a {
                 $white-color -1px 2px;
     color: $darker-black-color;
 
-    &:hover {
-        border-bottom-color: rgba($main-color, .25);
-        color: $main-sat-color;
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 0 1px $main-color;
+        background: $main-color;
+        text-shadow: none;
+        color: $white-color;
     }
 }
 
