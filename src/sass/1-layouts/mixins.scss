@@ -37,10 +37,12 @@
 
         @include queries($size, $queries) {
             #{$selector} {
-                @extend %container;
+                margin: 0 auto;
                 padding-right: #{$query-p};
                 padding-left: #{$query-p};
                 width: #{$query};
+                overflow: hidden;
+                box-sizing: border-box;
             }
         }
     }
@@ -53,10 +55,12 @@
 
         @include queries($size, $queries) {
             #{$selector} {
-                @extend %container;
+                margin: 0 auto;
                 padding-right: #{$query-p};
                 padding-left: #{$query-p};
                 width: 100%;
+                overflow: hidden;
+                box-sizing: border-box;
             }
         }
     }
