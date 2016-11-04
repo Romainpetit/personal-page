@@ -5,13 +5,13 @@
     @include base(padding-right, 1);
     display: block;
     position: relative;
-    transition: background-position .15s ease-in-out;
+    transition: background-position .15s cubic-bezier(.22, .61, .36, 1);
     z-index: 0;
-    text-decoration: none;
     background: linear-gradient(to top, $main-color 0%, $main-color 50%, $main-sat-color 100%);
     background-position: bottom;
     background-size: 200%;
     overflow: hidden;
+    text-decoration: none;
     text-shadow: 0 0 6px $main-sat-color;
     color: $white-color;
 
@@ -23,19 +23,43 @@
 
     &-title {
         @include base(padding-top, 1);
+        @include base(font-size, .8);
         z-index: 1;
         text-align: center;
         font-family: $font-family-sans-serif;
 
         .realisation:hover & {
-            text-decoration: underline;
+            animation-name: pulse;
+            animation-duration: .3s;
+            animation-fill-mode: both;
         }
     }
 
     &-description {
         @include base(padding-bottom, 1);
         display: block;
+        @include base(font-size, .7);
         text-align: center;
+
+        .realisation:hover & {
+            animation-name: pulse;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+        }
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale3d(1, 1, 1);
+        }
+
+        40% {
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+            transform: scale3d(1, 1, 1);
+        }
     }
 
     &-image {
