@@ -1,7 +1,7 @@
 {
   "name": "RomainPetit",
-  "version": "1.0.2",
-  "description": "A web maker personnal page. Go ahead and copy the page style if you like it. Please just avoid spoofing my identity, if I may ask.",
+  "version": "1.0.3",
+  "description": "A web maker personal page. Go ahead and copy the page style if you like it. Please just avoid spoofing my identity, if I may ask.",
   "style": "dist/css/styles.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,10 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Leadformance/Website-2.0.git"
+    "url": "git@github.com:romainpetit/personal-page.git"
   },
   "keywords": [
     "romain",
+    "petit",
     "developer",
     "front-end",
     "freelance"
@@ -20,7 +21,7 @@
   "author": "Romain Petit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Leadformance/Website-2.0/issues"
+    "url": "https://github.com/romainpetit/personal-page/issues"
   },
   "homepage": "http://www.romainpetit.com",
   "devDependencies": {
