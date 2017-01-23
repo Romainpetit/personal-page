@@ -44,12 +44,12 @@ img {
 
 a {
     .icon {
-        fill : $copy-color;
+        fill: $copy-color;
     }
 
     &:hover {
         .icon {
-            fill : $main-color;
+            fill: $main-color;
         }
     }
 }
@@ -213,9 +213,9 @@ blockquote {
                 border-color .15s ease-in-out;
     border: 1px solid rgba($white-color, 0);
     background-color: rgba($white-color, .8);
-    color: $copy-color;
     width: 100%;
     text-align: center;
+    color: $copy-color;
     appearance: none;
 
     @include queries($md) {
@@ -237,8 +237,8 @@ blockquote {
     &:active,
     &:focus {
         border-color: rgba($white-color, 1);
-        background-color: rgba($white-color, 1);
         box-shadow: none;
+        background-color: rgba($white-color, 1);
     }
 }
 
@@ -250,7 +250,6 @@ blockquote {
     @include base(padding-left, 1);
     @include base(padding-right, 1);
     @include base(margin-bottom, .5);
-    appearance: none;
     transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
     margin-top: -2px;
     background-color: rgba($white-color, 1);
@@ -259,6 +258,7 @@ blockquote {
     letter-spacing: 2px;
     color: $main-sat-color;
     font-family: $font-family-sans-serif;
+    appearance: none;
 
     &:hover,
     &:focus {
