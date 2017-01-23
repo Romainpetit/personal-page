@@ -6,14 +6,6 @@
 // breakpoints, see grid.scss.
 
 // Colors
-$pink-color: hsla(344, 100%, 67%, 1);
-$pink-color-sat: hsla(344, 100%, 60%, 1);
-$light-purple-color: hsla(252, 19%, 32%, 1);
-$purple-color: hsla(265, 26%, 25%, 1);
-$purple-color-faded: hsla(262, 18%, 24%, 1);
-$dark-purple-color: hsla(266, 25%, 13%, 1);
-$dark-grey-color: $dark-purple-color;
-$white-color: hsla(0, 0%, 100%, 1);
 $light-grey-color: hsla(228, 33%, 97%, 1);
 $grey-color: hsla(228, 13%, 92%, 1);
 $medium-grey-color: #b3bec1;
@@ -74,7 +66,7 @@ $root-font-size: $base-font-size;
 $html-background-color: $base-background-color;
 $root-line-height: $base-line-height;
 $html-color: $base-font-color;
-$selection-background-color: $dark-purple-color;
+$selection-background-color: $main-color;
 
 //-----Colors-----//
 //>>Primary
@@ -95,10 +87,6 @@ $third-color-border: hsla(202, 98%, 37%, 1);
 //>>bg
 $bg-grey: $light-grey-color;
 $bg-white: $white-color;
-$bg-purple: $purple-color;
-$bg-light-purple: $light-purple-color;
-$bg-dark-purple: $dark-purple-color;
-$bg-pink: $pink-color;
 $bg-blue: $blue-color;
 $bg-main: $main-color;
 
@@ -182,9 +170,9 @@ $form-field-height: 2.5rem;
 $form-field-padding: .6875rem;
 $form-field-padding-y: .6875rem;
 $form-field-padding-x: .6875rem;
-$field-focus-color: $pink-color;
+$field-focus-color: $main-color;
 $field-success-color: $green-color;
-$field-warning-color: $purple-color;
+$field-warning-color: $main-color;
 $field-error-color: $error-color;
 
 // Icons
