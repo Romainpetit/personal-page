@@ -7,6 +7,7 @@ Source served on http://romainpetit.com - My personal page
    and stay on master branch 
 
 1. **Install required gulp modules**
+
    Use node v4.4.0
 
    `$ npm install`
