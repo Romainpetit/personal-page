@@ -211,8 +211,8 @@ blockquote {
     @include base(padding-right, .25);
     transition: background-color .15s ease-in-out,
                 border-color .15s ease-in-out;
-    border: 1px solid rgba($white-color, 0);
-    background-color: rgba($white-color, .8);
+    border: 1px solid rgba($white-color, .8);
+    background-color: rgba($white-color, 0);
     width: 100%;
     text-align: center;
     color: $copy-color;
