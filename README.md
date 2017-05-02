@@ -45,27 +45,37 @@ Source served on http://romainpetit.com - My personal page
 1. **Commit your changes**
 
    
-#Troubleshooting :
+# Troubleshooting :
 
-####If you want more details on the tasks being run, use
+#### If you want more details on the tasks being run, use
 `$ gulp --verbose`
 
-####You need to have Ruby installed. If not, run 
+#### You need to have Ruby installed. If not, run 
 `$ npm install ruby-sass`
  
-####Error during gulp lint task
+#### Error during gulp lint task
 You need to have the scss_lint ruby gem.
 
 `sudo gem install scss_lint`
 
-####Livereload not working
+#### Livereload not working
 install the Livereload extension on your browser.
 Turn it on on your tab, re-run `$gulp watch` and reload manually once.
 
 # Dependencies : 
 
-####Sanitize.scss
+#### Sanitize.scss
 [https://www.npmjs.com/package/sanitize.scss](https://www.npmjs.com/package/sanitize.scss)
 sanitize.css ported to sass
 
 It is located in `src/sass/0-vendors/sanitize.scss` and called in `src/sass/app.scss` 
+
+#### Metrical.scss
+
+This is the responsive vertical library used across the project.  
+Use like this:
+```
+.layout {
+    @include base(padding-bottom, 1);
+```
+Will result of `.layout` having a `padding-bottom` of 1 responsive **base unit**.
