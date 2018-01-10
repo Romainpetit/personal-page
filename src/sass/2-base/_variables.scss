@@ -76,14 +76,14 @@ $primary-color-title: hsla(202, 98%, 37%, 1);
 $primary-color-border: hsla(202, 98%, 37%, 1);
 
 //>>Secondary
-$secondary-color-text: hsla(0, 0%, 20%, 1);
-$secondary-color-title: hsla(202, 98%, 37%, 1);
-$secondary-color-border: hsla(202, 98%, 37%, 1);
+$secondary-color-text: $primary-color-text;
+$secondary-color-title: $primary-color-title;
+$secondary-color-border: $primary-color-border;
 
 //>>Third
-$third-color-text: hsla(0, 0%, 20%, 1);
-$third-color-title: hsla(202, 98%, 37%, 1);
-$third-color-border: hsla(202, 98%, 37%, 1);
+$third-color-text: $secondary-color-text;
+$third-color-title: $secondary-color-title;
+$third-color-border: $secondary-color-border;
 
 //>>bg
 $bg-grey: $light-grey-color;
