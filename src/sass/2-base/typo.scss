@@ -55,7 +55,7 @@
     }
 
     @include queries($md) {
-        @include base(margin-top, 5);
+        @include base(margin-top, 6);
     }
 }
 
