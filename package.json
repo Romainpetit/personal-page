@@ -1,6 +1,6 @@
 {
   "name": "RomainPetit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A web maker personal page. Go ahead and copy the page style if you like it. Please just avoid spoofing my identity, if I may ask.",
   "style": "dist/css/styles.min.css",
   "scripts": {
@@ -16,7 +16,8 @@
     "petit",
     "developer",
     "front-end",
-    "freelance"
+    "freelance",
+    "grenoble"
   ],
   "author": "Romain Petit",
   "license": "MIT",
