@@ -3,6 +3,11 @@
 //------------------------------------------------------------------
 
 // For anything related to alignment and positionning, see positionning.scss
+
+.color-white-faded {
+    color: rgba(255, 255, 255, .6);
+}
+
 .box {
     padding-top: $box-top-padding;
     padding-bottom: $box-bottom-padding;
@@ -76,4 +81,8 @@
 
 .hidden-temp {
     display: none;
+}
+
+.text-inline {
+    display: inline;
 }

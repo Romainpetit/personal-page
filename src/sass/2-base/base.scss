@@ -3,8 +3,7 @@
 }
 
 body {
-    //scss-lint:disable VendorPrefix
-    //scss-lint:disable PropertySortOrder
+    //scss-lint:disable VendorPrefix, PropertySortOrder
 
     margin: 0;
     background: $base-background-color;
@@ -215,7 +214,7 @@ blockquote {
     background-color: rgba($white-color, 0);
     width: 100%;
     text-align: center;
-    color: $copy-color;
+    color: $white-color;
     appearance: none;
 
     @include queries($md) {
@@ -239,6 +238,7 @@ blockquote {
         border-color: rgba($white-color, 1);
         box-shadow: none;
         background-color: rgba($white-color, 1);
+        color: $copy-color;
     }
 }
 
