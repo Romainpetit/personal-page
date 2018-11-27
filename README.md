@@ -7,13 +7,12 @@ Source served on http://romainpetit.com - My personal page
 1. **Fork this repo**
 
    and stay on master branch 
-
 1. **Install required gulp modules**
    `$ npm install`
 
     *Windows:*
     May require to run console as admin.
-
+ 
     *Mac:*
     Sudo may be required. `$ sudo npm install`
     
