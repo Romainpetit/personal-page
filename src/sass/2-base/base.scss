@@ -1,293 +1,239 @@
 :root {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  background: $base-background-color;
 }
 
 body {
-    //scss-lint:disable VendorPrefix, PropertySortOrder
+  //scss-lint:disable VendorPrefix, PropertySortOrder
 
-    margin: 0;
-    background: $base-background-color;
-    padding: 0;
-    color: $copy-color;
-    font-family: $font-family-serif;
-    font-size: $base-font-size;
-    font-weight: 300;
-    overflow-x: hidden;
+  margin: 0;
+  background: $base-background-color;
+  padding: 0;
+  color: $copy-color;
+  font-family: $font-family-serif;
+  font-size: $base-font-size;
+  font-weight: 300;
+  overflow-x: hidden;
 
-    // Better text legibility
-    text-rendering: optimizeLegibility;
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -ms-text-size-adjust: none;
+  // Better text legibility
+  text-rendering: optimizeLegibility;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 
-    // Better Font Rendering
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+  // Better Font Rendering
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 
-    //scss-lint:enable VendorPrefix
-    //scss-lint:enable PropertySortOrder
+  //scss-lint:enable VendorPrefix
+  //scss-lint:enable PropertySortOrder
 
-    box-sizing: border-box;
-    word-break: break-word;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 :focus {
-    outline-color: transparent;
-    outline-style: none;
+  outline-color: transparent;
+  outline-style: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-    .icon {
-        fill: $copy-color;
-    }
+  .icon {
+    fill: $copy-color;
+  }
 
-    &:hover {
-        .icon {
-            fill: $main-color;
-        }
+  &:hover {
+    .icon {
+      fill: $main-color;
     }
+  }
 }
 
 .link {
-    border-bottom: 1px solid rgba($main-color, .5);
-    text-decoration: none;
-    text-shadow: $white-color .5px .5px,
-                $white-color -.5px .5px,
-                $white-color 1px 1px,
-                $white-color -1px 1px,
-                $white-color 1.5px 1.5px,
-                $white-color -1.5px 1.5px,
-                $white-color -2px 1px,
-                $white-color -2px 1.5px,
-                $white-color 2px 1px,
-                $white-color 2px 1.5px,
-                $white-color 2px 2px,
-                $white-color -2px 2px,
-                $white-color 2.5px 2.5px,
-                $white-color -2.5px 2.5px,
-                $white-color 3px 3px,
-                $white-color -3px 3px,
-                $white-color 2.5px 3px,
-                $white-color -2.5px 3px,
-                $white-color 0 .5px,
-                $white-color 0 1px,
-                $white-color 0 1.5px,
-                $white-color 0 2px,
-                $white-color 0 2.5px,
-                $white-color 0 3px,
-                $white-color 1px 4px,
-                $white-color -1px 4px,
-                $white-color 1px 3.5px,
-                $white-color -1px 3.5px,
-                $white-color 1px 3px,
-                $white-color -1px 3px,
-                $white-color 1px 2.5px,
-                $white-color -1px 2.5px,
-                $white-color 1px 2px,
-                $white-color -1px 2px;
-    color: $darker-black-color;
+  border-bottom: 1px solid rgba($main-color, .5);
+  text-decoration: none;
+  text-shadow: $white-color .5px .5px,
+    $white-color -.5px .5px,
+    $white-color 1px 1px,
+    $white-color -1px 1px,
+    $white-color 1.5px 1.5px,
+    $white-color -1.5px 1.5px,
+    $white-color -2px 1px,
+    $white-color -2px 1.5px,
+    $white-color 2px 1px,
+    $white-color 2px 1.5px,
+    $white-color 2px 2px,
+    $white-color -2px 2px,
+    $white-color 2.5px 2.5px,
+    $white-color -2.5px 2.5px,
+    $white-color 3px 3px,
+    $white-color -3px 3px,
+    $white-color 2.5px 3px,
+    $white-color -2.5px 3px,
+    $white-color 0 .5px,
+    $white-color 0 1px,
+    $white-color 0 1.5px,
+    $white-color 0 2px,
+    $white-color 0 2.5px,
+    $white-color 0 3px,
+    $white-color 1px 4px,
+    $white-color -1px 4px,
+    $white-color 1px 3.5px,
+    $white-color -1px 3.5px,
+    $white-color 1px 3px,
+    $white-color -1px 3px,
+    $white-color 1px 2.5px,
+    $white-color -1px 2.5px,
+    $white-color 1px 2px,
+    $white-color -1px 2px;
+  color: $darker-black-color;
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 0 1px $main-color;
-        background: $main-color;
-        text-shadow: none;
-        color: $white-color;
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 1px $main-color;
+    background: $main-color;
+    text-shadow: none;
+    color: $white-color;
+  }
 }
 
 p,
 .copy {
-    @include mb-base(1);
-    font-weight: $font-weight-book;
+  @include mb-base(1);
+  font-weight: $font-weight-book;
 }
 
 hr {
-    @include base(height, 1);
-    position: relative;
-    margin: 0 auto;
-    width: 40%;
+  @include base(height, 1);
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
 
-    &:before {
-        position: absolute;
-        top: -1px;
-        animation: flow 1s ease infinite;
-        background: linear-gradient(to right,
-            rgba($main-color, 1) 0%,
-            rgba($main-color, .75) 40%,
-            rgba($main-color, .75) 60%,
-            rgba($main-color, 1) 100%);
-        background-size: 400% 400%;
-        width: 100%;
-        height: 0;
-        content: '';
-    }
+  &:before {
+    position: absolute;
+    top: -1px;
+    animation: flow 1s ease infinite;
+    background: linear-gradient(to right,
+      rgba($main-color, 1) 0%,
+      rgba($main-color, .75) 40%,
+      rgba($main-color, .75) 60%,
+      rgba($main-color, 1) 100%);
+    background-size: 400% 400%;
+    width: 100%;
+    height: 0;
+    content: '';
+  }
 }
 
 em {
-    font-family: $font-family-serif;
+  font-family: $font-family-serif;
 }
 
 cite {
-    font-family: $font-family-sans-serif;
-    font-style: normal;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 blockquote {
-    margin: 0;
+  margin: 0;
 }
 
 .layout {
-    @include base(padding-bottom, 1);
-    position: relative;
-    background-image: url('http://basehold.it/i/29/');
+  position: relative;
+  background-image: url('http://basehold.it/i/29/');
 
-    @include queries($sm) {
-        @include base(padding-bottom, 2);
-        background-image: url('http://basehold.it/i/33/');
-    }
+  @include queries($sm) {
+    background-image: url('http://basehold.it/i/33/');
+  }
 
-    @include queries($md) {
-        @include base(padding-bottom, 4);
-        background-image: url('http://basehold.it/i/36/');
-    }
+  @include queries($md) {
+    background-image: url('http://basehold.it/i/36/');
+  }
 
-    @include queries($xl) {
-        background-image: url('http://basehold.it/i/39/');
-    }
+  @include queries($xl) {
+    background-image: url('http://basehold.it/i/39/');
+  }
 
-    @include queries($xxl) {
-        background-image: url('http://basehold.it/i/42/');
-    }
-
+  @include queries($xxl) {
+    background-image: url('http://basehold.it/i/42/');
+  }
 }
 
 .main-content {
-    > * {
-        animation: fadein 1s ease-in-out;
-    }
+  >* {
+    animation: fadein 1s ease-in-out;
+  }
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #layout.off {
-    background-image: none !important;
+  background-image: none !important;
 }
 
-#mc_embed_signup {
-    text-align: center;
+.button {
+  @include base(font-size, .5);
+  @include base(border-radius, .5);
+  @include base(padding-top, .35);
+  @include base(padding-bottom, .35);
+  @include base(padding-left, 1);
+  @include base(padding-right, 1);
+  display: inline-block;
+  transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
+  background-color: rgba($white-color, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $main-sat-color;
+  font-family: $font-family-sans-serif;
+  appearance: none;
 
-    label {
-        @include base(font-size, .25);
-        display: block;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: $font-family-sans-serif;
-    }
+  &:hover,
+  &:focus {
+    transform: scale(1.09);
+  }
+
+  &:hover:active,
+  &:active {
+    transform: scale(.95);
+  }
 }
 
-#mce-EMAIL {
-    @include base(border-radius, .5);
-    @include base(margin, .5);
-    @include base(margin-top, 0);
-    @include base(margin-left, 0);
-    @include base(margin-right, 0);
-    @include base(padding-top, .25);
-    @include base(padding-bottom, .25);
-    @include base(padding-left, .25);
-    @include base(padding-right, .25);
-    transition: background-color .15s ease-in-out,
-                border-color .15s ease-in-out;
-    border: 1px solid rgba($white-color, .8);
-    background-color: rgba($white-color, 0);
-    width: 100%;
-    text-align: center;
-    color: $white-color;
-    appearance: none;
+.img-rounded {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  @include base(width, 4);
 
-    @include queries($md) {
-        @include base(margin, .5);
-        @include base(margin-top, 0);
-        @include base(padding-left, 1);
-        @include base(padding-right, 1);
-        width: 80%;
-    }
+  @include queries($md) {
+    width: auto;
+  }
 
-    @include queries($lg) {
-        width: 70%;
-    }
+  @include queries($lg) {
+    width: auto;
+  }
 
-    &:hover {
-        border-color: rgba($white-color, 1);
-    }
+  @include queries($xl) {
+    width: auto;
+  }
 
-    &:active,
-    &:focus {
-        border-color: rgba($white-color, 1);
-        box-shadow: none;
-        background-color: rgba($white-color, 1);
-        color: $copy-color;
-    }
-}
-
-#mc-embedded-subscribe {
-    @include base(font-size, .5);
-    @include base(border-radius, .5);
-    @include base(padding-top, .27);
-    @include base(padding-bottom, .23);
-    @include base(padding-left, 1);
-    @include base(padding-right, 1);
-    @include base(margin-bottom, .5);
-    transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
-    margin-top: -2px;
-    background-color: rgba($white-color, 1);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $main-sat-color;
-    font-family: $font-family-sans-serif;
-    appearance: none;
-
-    &:hover,
-    &:focus {
-        transform: scale(1.08);
-    }
-
-    &:hover:active,
-    &:active {
-        transform: scale(.95);
-    }
-}
-
-#subscribe-result {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    animation: fadein .2s ease-in-out;
-    width: 100%;
-    text-align: center;
-
-    &.success {
-        background: $green-color;
-    }
-
-    &.loading {
-        background: $main-color;
-    }
-
-    &.fail {
-        background: $red-color;
-    }
+  @include queries($xxl) {
+    width: auto;
+  }
 }

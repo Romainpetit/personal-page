@@ -1,9 +1,16 @@
 .platforms {
-    display: flex;
-    margin: 0;
-    justify-content: center;
+  display: flex;
+  margin: 0;
 
-    svg {
-        float: left;
-    }
+  @include queries($xs) {
+    justify-content: center;
+  }
+
+  @include queries($sm) {
+    justify-content: left;
+  }
+
+  svg {
+    float: left;
+  }
 }

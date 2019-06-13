@@ -12,9 +12,9 @@ $half-gutter-width: ($gutter-width / 2) !default;
 $width-xs: 0 !default; // Starting value
 $width-sm: 336 !default; // 336px
 $width-md: 540 !default; // 528px
-$width-lg: 720 !default; // 800px
-$width-xl: 1072 !default; // 1072px
-$width-xxl: 1408 !default; // 1408px
+$width-lg: 890 !default; // 800px
+$width-xl: 1140 !default; // 1072px
+$width-xxl: 1460 !default; // 1408px
 // Base font size factor for each breakpoint. REM metrics used everywhere else.
 $font-xs: 20px; // 12px
 $font-sm: 22px; // 14px
@@ -55,8 +55,8 @@ $container-lg: 61.8033% !default;
 $container-xl: 61.8033% !default;
 $container-xxl: 61.8033% !default;
 // Fluid containers padding for each breakpoint
-$fluid-container-xs-p: 0;
-$fluid-container-sm-p: 0;
+$fluid-container-xs-p: $margin-xs;
+$fluid-container-sm-p: $margin-sm;
 $fluid-container-md-p: $margin-md;
 $fluid-container-lg-p: $margin-lg;
 $fluid-container-xl-p: $margin-xl;
@@ -81,60 +81,51 @@ $modifier-delimiter: "-" !default;
 $default-query: $viewport-xs !default;
 // Putting breakpoint related values in arrays
 $sizes: $xs $sm $md $lg $xl $xxl !default;
-$queries: (
-  #{$xs}: #{$viewport-xs},
-  #{$sm}: #{$viewport-sm},
-  #{$md}: #{$viewport-md},
-  #{$lg}: #{$viewport-lg},
-  #{$xl}: #{$viewport-xl},
-  #{$xxl}: #{$viewport-xxl}
-) !default;
+$queries: (#{$xs}: #{$viewport-xs},
+#{$sm}: #{$viewport-sm},
+#{$md}: #{$viewport-md},
+#{$lg}: #{$viewport-lg},
+#{$xl}: #{$viewport-xl},
+#{$xxl}: #{$viewport-xxl}) !default;
 $queries-v: (#{$xs}: #{$viewport-v-xs}, #{$sm}: #{$viewport-v-sm}) !default;
-$fonts: (
-  #{$xs}: #{$font-xs},
-  #{$sm}: #{$font-sm},
-  #{$md}: #{$font-md},
-  #{$lg}: #{$font-lg},
-  #{$xl}: #{$font-xl},
-  #{$xxl}: #{$font-xxl}
-) !default;
-$line-heights: (
-  #{$xs}: #{$line-height-xs},
-  #{$sm}: #{$line-height-sm},
-  #{$md}: #{$line-height-md},
-  #{$lg}: #{$line-height-lg},
-  #{$xl}: #{$line-height-xl},
-  #{$xxl}: #{$line-height-xxl}
-) !default;
-$containers: (
-  #{$xs}: #{$container-xs},
-  #{$sm}: #{$container-sm},
-  #{$md}: #{$container-md},
-  #{$lg}: #{$container-lg},
-  #{$xl}: #{$container-xl},
-  #{$xxl}: #{$container-xxl}
-) !default;
-$fluid-containers-p: (
-  #{$xs}: #{$fluid-container-xs-p},
-  #{$sm}: #{$fluid-container-sm-p},
-  #{$md}: #{$fluid-container-md-p},
-  #{$lg}: #{$fluid-container-lg-p},
-  #{$xl}: #{$fluid-container-xl-p},
-  #{$xxl}: #{$fluid-container-xxl-p}
-) !default;
-$containers-p: (
-  #{$xs}: #{$container-xs-p},
-  #{$sm}: #{$container-sm-p},
-  #{$md}: #{$container-md-p},
-  #{$lg}: #{$container-lg-p},
-  #{$xl}: #{$container-xl-p},
-  #{$xxl}: #{$container-xxl-p}
-) !default;
-$column-properties: "flex-basis", "max-width" !default;
+$fonts: (#{$xs}: #{$font-xs},
+#{$sm}: #{$font-sm},
+#{$md}: #{$font-md},
+#{$lg}: #{$font-lg},
+#{$xl}: #{$font-xl},
+#{$xxl}: #{$font-xxl}) !default;
+$line-heights: (#{$xs}: #{$line-height-xs},
+#{$sm}: #{$line-height-sm},
+#{$md}: #{$line-height-md},
+#{$lg}: #{$line-height-lg},
+#{$xl}: #{$line-height-xl},
+#{$xxl}: #{$line-height-xxl}) !default;
+$containers: (#{$xs}: #{$container-xs},
+#{$sm}: #{$container-sm},
+#{$md}: #{$container-md},
+#{$lg}: #{$container-lg},
+#{$xl}: #{$container-xl},
+#{$xxl}: #{$container-xxl}) !default;
+$fluid-containers-p: (#{$xs}: #{$fluid-container-xs-p},
+#{$sm}: #{$fluid-container-sm-p},
+#{$md}: #{$fluid-container-md-p},
+#{$lg}: #{$fluid-container-lg-p},
+#{$xl}: #{$fluid-container-xl-p},
+#{$xxl}: #{$fluid-container-xxl-p}) !default;
+$containers-p: (#{$xs}: #{$container-xs-p},
+#{$sm}: #{$container-sm-p},
+#{$md}: #{$container-md-p},
+#{$lg}: #{$container-lg-p},
+#{$xl}: #{$container-xl-p},
+#{$xxl}: #{$container-xxl-p}) !default;
+$column-properties: "flex-basis",
+"max-width" !default;
 $offset-properties: "margin-left" !default;
+
 @mixin mt-base($multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       margin-top: $total; // @return $value;
@@ -145,6 +136,7 @@ $offset-properties: "margin-left" !default;
 @mixin mb-base($multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       margin-bottom: $total; // @return $value;
@@ -155,6 +147,7 @@ $offset-properties: "margin-left" !default;
 @mixin pt-base($multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       padding-top: $total; // @return $value;
@@ -165,6 +158,7 @@ $offset-properties: "margin-left" !default;
 @mixin pb-base($multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       padding-bottom: $total; // @return $value;
@@ -175,6 +169,7 @@ $offset-properties: "margin-left" !default;
 @mixin base($property, $multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       #{$property}: $total; // @return $value;
@@ -185,6 +180,7 @@ $offset-properties: "margin-left" !default;
 @mixin lh-base($multiplier, $queries: $queries) {
   @each $size in $sizes {
     $base: map-get($line-heights, $size);
+
     @include queries($size, $queries) {
       $total: ($multiplier * $base);
       line-height: $total; // @return $value;
@@ -207,6 +203,7 @@ $offset-properties: "margin-left" !default;
 @include containers();
 @include fluid-containers();
 @include fonts();
+
 .row {
   display: flex;
   margin-right: $gutter-compensation;
@@ -226,3 +223,8 @@ $offset-properties: "margin-left" !default;
 
 @include columns();
 @include offsets();
+
+.align-self-center {
+  -ms-flex-item-align: center !important;
+  align-self: center !important;
+}
