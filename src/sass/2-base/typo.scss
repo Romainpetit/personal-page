@@ -37,11 +37,11 @@
     font-weight: $font-weight-medium;
 
     @include queries($sm) {
-        @include base(margin-top, 4);
+        @include base(margin-top, 3);
     }
 
     @include queries($md) {
-        @include base(margin-top, 6);
+        @include base(margin-top, 4);
     }
 }
 
