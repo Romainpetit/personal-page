@@ -55,6 +55,7 @@
     "imagemin-pngquant": "^4.2.0",
     "imagemin-svgo": "^4.1.2",
     "instant": "^1.9.0",
+    "node-bourbon": "^4.2.8",
     "st": "^0.5.5",
     "vinyl-ftp": "^0.4.5",
     "yargs": "^3.26.0"

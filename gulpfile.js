@@ -127,11 +127,7 @@ gulp.task('check-for-favicon-update', function(done) {
 
 
 gulp.task('default', [
-    'images-png',
-    'images-svg',
-    'generate-favicon',
     'sass-lint',
-    'move-fonts',
     'sass',
     'css',
     'jslint',
@@ -186,88 +182,88 @@ gulp.task('fileinclude', ['sass-lint'], function() {
     .pipe(gulp.dest('_htmlCombined/'));
 });
 
-gulp.task('images-png', ['fileinclude'], function(cb) {
-    return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg'])
-        .pipe(isVerbose ?
-            size({
-                title: "Png images original size "
-            })
-        : gutil.noop())
-        .pipe(isVerbose ?
-            count('## png images detected')
-        : gutil.noop())
-        .pipe(imagemin({
-            progressive: true,
-            use: [pngquant()]
-        }))
-        .pipe(isVerbose ?
-            count('## png images minified')
-        : gutil.noop())
-        .pipe(gulp.dest('dist/images'))
-        .pipe(isVerbose ?
-            size({
-                title: "Png images final size -- "
-            })
-        : gutil.noop())
-        .pipe(isVerbose ?
-            size({
-                gzip: true,
-                title: "Png images final size -- "
-            })
-        : gutil.noop());
-    cb(err); // Callback showing errors, if any
-});
+// gulp.task('images-png', ['fileinclude'], function(cb) {
+//     return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg'])
+//         .pipe(isVerbose ?
+//             size({
+//                 title: "Png images original size "
+//             })
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             count('## png images detected')
+//         : gutil.noop())
+//         .pipe(imagemin({
+//             progressive: true,
+//             use: [pngquant()]
+//         }))
+//         .pipe(isVerbose ?
+//             count('## png images minified')
+//         : gutil.noop())
+//         .pipe(gulp.dest('dist/images'))
+//         .pipe(isVerbose ?
+//             size({
+//                 title: "Png images final size -- "
+//             })
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             size({
+//                 gzip: true,
+//                 title: "Png images final size -- "
+//             })
+//         : gutil.noop());
+//     cb(err); // Callback showing errors, if any
+// });
 
-gulp.task('images-svg', ['images-png'], function (cb) {
-    return gulp.src('src/images/*.svg')
-        .pipe(isVerbose ?
-            size({
-                title: "Svg images raw size ---- "
-            })
-        : gutil.noop())
-        .pipe(isVerbose ?
-            count('## svg images detected')
-        : gutil.noop())
-        .pipe(imageminSvgo()())
-        .pipe(isVerbose ?
-            count('## svg images minified')
-        : gutil.noop())
-        .pipe(gulp.dest('dist/images'))
-        .pipe(isVerbose ?
-            size({
-                title: "Svg images final size -- "
-            })
-        : gutil.noop())
-        .pipe(isVerbose ?
-            size({
-                gzip: true,
-                title: "Svg images final size -- "
-            })
-        : gutil.noop());
-    cb(err); // Callback showing errors, if any
-});
+// gulp.task('images-svg', ['fileinclude'], function (cb) {
+//     return gulp.src('src/images/*.svg')
+//         .pipe(isVerbose ?
+//             size({
+//                 title: "Svg images raw size ---- "
+//             })
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             count('## svg images detected')
+//         : gutil.noop())
+//         .pipe(imageminSvgo()())
+//         .pipe(isVerbose ?
+//             count('## svg images minified')
+//         : gutil.noop())
+//         .pipe(gulp.dest('dist/images'))
+//         .pipe(isVerbose ?
+//             size({
+//                 title: "Svg images final size -- "
+//             })
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             size({
+//                 gzip: true,
+//                 title: "Svg images final size -- "
+//             })
+//         : gutil.noop());
+//     cb(err); // Callback showing errors, if any
+// });
 
-gulp.task('move-fonts', ['images-svg'], function(cb) {
-    return gulp.src('src/fonts/*')
-        .pipe(gulp.dest('dist/fonts/'))
-        .pipe(isVerbose ?
-            count('## fonts')
-        : gutil.noop())
-        .pipe(isVerbose ?
-            size({
-                title: "Fonts final size ------- "
-            })
-        : gutil.noop())
-        .pipe(isVerbose ?
-            size({
-                gzip: true,
-                title: "Fonts final size ------- "
-            })
-        : gutil.noop());
-    cb(err); // Callback showing errors, if any
-});
+// gulp.task('move-fonts', ['fileinclude'], function(cb) {
+//     return gulp.src('src/fonts/*')
+//         .pipe(gulp.dest('dist/fonts/'))
+//         .pipe(isVerbose ?
+//             count('## fonts')
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             size({
+//                 title: "Fonts final size ------- "
+//             })
+//         : gutil.noop())
+//         .pipe(isVerbose ?
+//             size({
+//                 gzip: true,
+//                 title: "Fonts final size ------- "
+//             })
+//         : gutil.noop());
+//     cb(err); // Callback showing errors, if any
+// });
 
-gulp.task('sass', ['move-fonts'], function(cb) {
+gulp.task('sass', ['fileinclude'], function(cb) {
     return gulp.src('src/sass/*.scss')
 
         .pipe(sass({
