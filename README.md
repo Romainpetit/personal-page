@@ -5,12 +5,8 @@ Source served on http://romainpetit.com - My personal page
 
 # Contributing :
 1. **Fork this repo**
+and stay on master branch 
 
-<<<<<<<
-   and stay on master branch 
-=======
-   and stay on master branch
->>>>>>>
 1. **Install required gulp modules**
    `$ npm install`
 
@@ -20,32 +16,32 @@ Source served on http://romainpetit.com - My personal page
     *Mac:*
     Sudo may be required. `$ sudo npm install`
 
-1. **Run a project build**
+2. **Run a project build**
 
    `$ gulp`
 
-1. Watch project modifications, use livereload and start a local server *(optional)*
+3. Watch project modifications, use livereload and start a local server *(optional)*
 
    `$ gulp watch`
-1. **Open the result in your browser**
+4. **Open the result in your browser**
 
    *Without local server* : `open dist/index.html`
 
    *With local server* : `open http://localhost:8080/`
 
-1. **Open src/ as workspace in your IDE and make your changes**
+5. **Open src/ as workspace in your IDE and make your changes**
 
-1. **Run a project build**
+6. **Run a project build**
 
    `$ gulp`
 
    and watch result in browser. This is automatically triggered if you ran `$ gulp watch`
 
-1. **Once changes are done deploy the result**
+7. **Once changes are done deploy the result**
 
    `$ gulp deploy`
 
-1. **Commit your changes**
+8. **Commit your changes**
 
 
 # Troubleshooting :
