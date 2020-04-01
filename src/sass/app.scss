@@ -1,9 +1,0 @@
-@import "bourbon/bourbon";
-
-@import '0-vendors/sanitize';
-@import '1-layouts/layout-dir';
-@import '2-base/base-dir';
-@import '3-modules/modules-dir';
-// Helpers are high specificity
-@import '2-base/helpers';
-@import '2-base/positionning';

@@ -1,0 +1,48 @@
+# education
+experiences:
+  enable : true
+  more : "There's more on"
+  teaching :
+    title : "Teaching for:"
+  teaching_items :
+    - title : Campus Numérique in the Alps
+      link : https://www.le-campus-numerique.fr/
+      mission : "Vue.js, Javascript, HTML+CSS & Project management lessons, in a 'flipped classroom' educational model."
+      
+    - title : Nomades Advanced Technologies
+      link : http://nomades.ch/
+      mission : JavaScript & jQuery lessons.
+      
+  products :
+    title : "Last product:"
+  products_items :
+    - title : InviteRobot
+      link : https://inviterobot.com/
+      mission : "Help makers create paid online communities. For Slack teams."
+      
+  missions :
+    title : "Previous missions:"
+  missions_items :
+    - title : Bearer
+      link : https://www.bearer.sh/
+      mission : Developing and helping people use a tool that reinvents the way we use APIs.
+      
+    - title : Université Grenoble Alpes
+      link : https://www.univ-grenoble-alpes.fr/
+      mission : Teaching React.js & Vue.js development, Web performance, Mobile web culture. Associate and Bachelor degree students.
+    
+    - title : Wide Agency
+      link : http://www.wideagency.com/
+      mission : "Making Swiss watchmakers e-commerce platforms comply to <a class='link' target='_blank' href='https://www.wikiwand.com/en/Web_Content_Accessibility_Guidelines'>WCAG 2.0 level AA</a>, and building top-notch interfaces."
+
+    - title : ALG
+      link : https://www.attestationlegale.fr/
+      mission : "Creation of a library of Web Components in React.js for the <a class='link' target='_blank' href='https://www.onceforall.com/'>Once For All</a> project."
+      
+    - title : Bio-Logic
+      link : http://www.bio-logic.net/
+      mission : "Design of a data visualisation system for running battery cyclers. Developement a graphing webapp with <a class='link' href='https://plot.ly/javascript/' target='_blank'>plotly.js</a>."
+    
+    - title : Leadformance
+      link : https://www.leadformance.com/
+      mission : "Creation of the front-end of 55 <a class='link' target='_blank' href='https://www.leadformance.com/en/clients-our-clients' id='leadformance-clients'>big brands</a> store locators like <a href='http://hair-salon.lorealprofessionnel.com/' class='link' target='_blank'>L'Oréal Professionel</a>, <a href='http://stores.millet.fr/' class='link' target='_blank'>Millet</a> or <a href='http://boutique.sfr.fr/' class='link' target='_blank'>SFR</a>. Complete corporate website development."
