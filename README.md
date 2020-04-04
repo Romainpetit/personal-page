@@ -4,7 +4,7 @@ Source served on http://romainpetit.com - My personal page
 ![Node 4.4.0](https://img.shields.io/badge/node-4.4.0-f39f37.svg)
 
 # Contributing :
-1. **Fork this repo** 
+1. **Fork this repo**
 and stay on master branch 
 
 1. **Install required gulp modules**
