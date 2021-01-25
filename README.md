@@ -1,81 +1,60 @@
-# personal-page
-Source served on http://romainpetit.com - My personal page
+[![nuxt-content](https://content.nuxtjs.org/preview.png)](https://content.nuxtjs.org)
 
-![Node 4.4.0](https://img.shields.io/badge/node-4.4.0-f39f37.svg)
+# @nuxt/content
 
-# Contributing :
-1. **Fork this repo**
-and stay on master branch 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
+[![Codecov][codecov-src]][codecov-href]
+[![License][license-src]][license-href]
+[![lerna][lerna-src]][lerna-href]
 
-1. **Install required gulp modules**
-   `$ npm install`
+> @nuxt/content lets you write in a content/ directory, acting as Git-based Headless CMS
 
-    *Windows:*
-    May require to run console as admin.
- 
-    *Mac:*
-    Sudo may be required. `$ sudo npm install`
+- [🎲 &nbsp;Play on CodeSandbox](https://codesandbox.io/s/nuxtcontent-demo-l164h?)
+- [🎬 &nbsp;Demonstration videos](https://content.nuxtjs.org/#videos)
+- [✨ &nbsp;Release Notes](https://github.com/nuxt/content/releases)
+- [📖 &nbsp;Read the documentation](https://content.nuxtjs.org)
 
-2. **Run a project build**
+## Features
 
-   `$ gulp`
+- Blazing fast hot reload in development
+- Vue components in Markdown
+- Full-text search
+- Support static site generation with `nuxt generate`
+- Powerful QueryBuilder API (MongoDB like)
+- Syntax highlighting to code blocks in markdown files using PrismJS.
+- Table of contents generation
+- Handles Markdown, CSV, YAML, JSON(5), XML
+- Extend with hooks
 
-3. Watch project modifications, use livereload and start a local server *(optional)*
+[📖 Read the documentation](https://content.nuxtjs.org)
 
-   `$ gulp watch`
-4. **Open the result in your browser**
+## Development
 
-   *Without local server* : `open dist/index.html`
+1. Clone this repository
+2. Install dependencies using `yarn install` or `npm install`
+3. Start development server using `yarn dev` or `npm run dev`
 
-   *With local server* : `open http://localhost:8080/`
+## License
 
-5. **Open src/ as workspace in your IDE and make your changes**
+[MIT License](./LICENSE)
 
-6. **Run a project build**
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/@nuxt/content/latest.svg
+[npm-version-href]: https://npmjs.com/package/@nuxt/content
 
-   `$ gulp`
+[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxt/content.svg
+[npm-downloads-href]: https://npmjs.com/package/@nuxt/content
 
-   and watch result in browser. This is automatically triggered if you ran `$ gulp watch`
+[github-actions-ci-src]: https://github.com/nuxt/content/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/nuxt/content/actions?query=workflow%3Aci
 
-7. **Once changes are done deploy the result**
+[codecov-src]: https://img.shields.io/codecov/c/github/nuxt/content.svg
+[codecov-href]: https://codecov.io/gh/nuxt/content
 
-   `$ gulp deploy`
+[license-src]: https://img.shields.io/npm/l/@nuxt/content.svg
+[license-href]: https://npmjs.com/package/@nuxt/content
 
-8. **Commit your changes**
-
-
-# Troubleshooting :
-
-#### If you want more details on the tasks being run, use
-`$ gulp --verbose`
-
-#### You need to have Ruby installed. If not, run
-`$ npm install ruby-sass`
-
-#### Error during gulp lint task
-You need to have the scss_lint ruby gem.
-
-`sudo gem install scss_lint`
-
-#### Livereload not working
-install the Livereload extension on your browser.
-Turn it on on your tab, re-run `$gulp watch` and reload manually once.
-
-# Dependencies :
-
-#### Sanitize.scss
-[https://www.npmjs.com/package/sanitize.scss](https://www.npmjs.com/package/sanitize.scss)
-sanitize.css ported to sass
-
-It is located in `src/sass/0-vendors/sanitize.scss` and called in `src/sass/app.scss`
-
-#### Metrical.scss
-
-This is the responsive vertical library used across the project.
-Use like this:
-```
-.layout {
-    @include base(padding-bottom, 1);
-}
-```
-Will result of `.layout` having a `padding-bottom` of 1 responsive **base unit**.
+[lerna-src]: https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg
+[lerna-href]: https://lerna.js.org/
