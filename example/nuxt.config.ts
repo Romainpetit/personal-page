@@ -2,6 +2,7 @@ import type { NuxtConfig } from "@nuxt/types";
 
 const config: NuxtConfig = {
   modules: ['@nuxt/content'],
+  buildModules: ['@nuxtjs/tailwindcss'],
   components: true,
   hooks: {
     'content:file:beforeInsert': async (document, database) => {
