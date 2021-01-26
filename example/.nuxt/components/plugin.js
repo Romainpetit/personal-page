@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 const globalComponents = {
-  MovieInfo: () => import('../../components/global/MovieInfo.vue' /* webpackChunkName: "components/global/MovieInfo" */).then(c => c.default || c)
+  MovieInfo: () => import('../../components/global/MovieInfo.vue' /* webpackChunkName: "components/movie-info" */).then(c => c.default || c)
 }
 
 for (const name in globalComponents) {

@@ -1,9 +1,22 @@
 import type { NuxtConfig } from "@nuxt/types";
 
 const config: NuxtConfig = {
+  head: {
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Oxygen&display=swap",
+      },
+    ],
+  },
   modules: ['@nuxt/content'],
   buildModules: ['@nuxtjs/tailwindcss'],
   components: true,
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    config: '~/tailwind.config.js',
+  },
   hooks: {
     'content:file:beforeInsert': async (document, database) => {
       if (document.extension === '.json' && document.body) {
