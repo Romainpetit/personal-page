@@ -124,44 +124,54 @@ three-part 1989 watercolor manga by Miyazaki.
 ### Teaching for
 
 #### [Le Campus Numérique in the Alps](https://www.le-campus-numerique.fr/)
+
 — Vue.js, Javascript, HTML+CSS & Project management lessons, in a "flipped classroom" educational model.
 
 #### [Human Coders](https://www.humancoders.com/)
-[Vue.js short & intensive sessions](https://www.humancoders.com/formations/vue-js) for teams.
 
+[Vue.js short & intensive sessions](https://www.humancoders.com/formations/vue-js) for teams.
 
 ### Last product
 
 #### [InviteRobot](https://inviterobot.com/)
-— Help makers create paid online communities. For Slack teams.
 
+— Help makers create paid online communities. For Slack teams.
 
 ### Last missions
 
 #### [BackMarket](https://www.backmarket.fr/)
+
 — Putting up a new portal with Vue.js & Nuxt.js, that consumes data from Algolia and Django.
 — Addition of interface components to the company’s global design system.
 
 #### [Nomades Advanced Technologies](http://nomades.ch/)
+
 — JavaScript & jQuery lessons.
 
 #### [Bearer.sh](https://www.bearer.sh/)
+
 — Developing and helping people use a tool that reinvents the way we use APIs.
 
 #### [Université Grenoble Alpes](https://www.univ-grenoble-alpes.fr/)
+
 — Teaching React.js & Vue.js development, Web performance, Mobile web culture. Associate and Bachelor degree students.
 
 #### [Wide Agency](http://www.wideagency.com/)
+
 — Making Swiss watchmakers e-commerce platforms comply to WCAG 2.0 level AA, and building top-notch interfaces.
 
 #### [ALG](https://www.attestationlegale.fr/)
+
 — Creation of a library of Web Components in React.js for the [Once For All](https://www.onceforall.com/) project, a platform generating legal documents.
 
 #### [Bio-Logic](http://www.bio-logic.net/)
+
 — Design of a data visualisation system for running battery cyclers. Developement a graphing webapp with [plotly.js](https://github.com/plotly/plotly.js).
 
 #### [Leadformance](https://www.leadformance.com/)
+
 — Creation of the front-end of 55 store locators for [big brands](https://www.leadformance.com/our-clients/) like [L'Oréal Professionel](https://hair-salon.lorealprofessionnel.com/), [Millet](http://magasins.millet.fr/) or [SFR](https://boutique.sfr.fr/).
+
 - Complete corporate website development.
 
 <!-- ```js{1,3-5}[server.js]
@@ -186,7 +196,7 @@ have to pick an identifier and move down to type the note.]
 [^1]: Here is the footnote.
 [^longnote]: Here’s one with multiple blocks.
 
-    Subsequent paragraphs are indented to show that they
+  Subsequent paragraphs are indented to show that they
 
 belong to the previous footnote.
 
