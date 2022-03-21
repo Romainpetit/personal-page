@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'freight_text';
+    src: url('../fonts/freighttextpro-book-webfont.eot');
+    src: url('../fonts/freighttextpro-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/freighttextpro-book-webfont.woff2') format('woff2'),
+         url('../fonts/freighttextpro-book-webfont.woff') format('woff'),
+         url('../fonts/freighttextpro-book-webfont.ttf') format('truetype'),
+         url('../fonts/freighttextpro-book-webfont.svg#freight_text_probook') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'freight_text';
+    src: url('../fonts/freighttextpro-bookitalic-webfont.eot');
+    src: url('../fonts/freighttextpro-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/freighttextpro-bookitalic-webfont.woff2') format('woff2'),
+         url('../fonts/freighttextpro-bookitalic-webfont.woff') format('woff'),
+         url('../fonts/freighttextpro-bookitalic-webfont.ttf') format('truetype'),
+         url('../fonts/freighttextpro-bookitalic-webfont.svg#freight_text_probook_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'freight_text';
+    src: url('../fonts/freighttextpro-demibold-webfont.eot');
+    src: url('../fonts/freighttextpro-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/freighttextpro-demibold-webfont.woff2') format('woff2'),
+         url('../fonts/freighttextpro-demibold-webfont.woff') format('woff'),
+         url('../fonts/freighttextpro-demibold-webfont.ttf') format('truetype'),
+         url('../fonts/freighttextpro-demibold-webfont.svg#freight_text_probook_italic') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('../fonts/proximanova-bold_0-webfont.eot');
+    src: url('../fonts/proximanova-bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold_0-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-bold_0-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold_0-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-bold_0-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?s7jhf');
+    src: url('../fonts/icomoon.eot?s7jhf#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?s7jhf') format('truetype'),
+        url('../fonts/icomoon.woff?s7jhf') format('woff'),
+        url('../fonts/icomoon.svg?s7jhf#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    text-transform: none;
+    line-height: 1;
+    font-family: 'icomoon';
+    font-weight: normal;
+
+    // Better Font Rendering
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    font-style: normal;
+    speak: none;
+    font-variant: normal;
+}
+
+.icon-list:before {
+    content: '\e61f';
+}
+
+.icon-profil:before {
+    content: '\e61d';
+}
+
+.icon-caret-left:before {
+    content: '\e620';
+}
+
+.icon-caret-right:before {
+    content: '\e601';
+}
+
+.icon-linkedin:before {
+    content: '\e609';
+}
+
+.icon-bridge:before {
+    content: '\e60a';
+}
+
+.icon-twitter:before {
+    content: '\e60f';
+}

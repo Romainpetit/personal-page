@@ -1,0 +1,100 @@
+@mixin selection($background: currentColor, $color: invert(currentColor)) {
+  ::selection {
+    background-color: $background;
+    text-shadow: none;
+    color: $color;
+  }
+}
+
+.color {
+  &-black {
+    color: $black-color;
+  }
+
+  &-red {
+    color: $red-color;
+  }
+
+  &-green {
+    color: $green-color;
+  }
+
+  &-grey {
+    color: $grey-color;
+  }
+
+  &-blue {
+    color: $blue-color;
+  }
+
+  &-main {
+    color: $main-color;
+  }
+}
+
+// Todo turn those two grays to syntax color-grey like above
+
+%grey,
+.grey {
+  color: $medium-grey-color;
+}
+
+// These are the color rules.
+// The background color of the block, set at the parent element level,
+// defines the colors of the elements in it
+
+// At the element level, colors will be using currentColor value, to inherit
+// from the following values
+
+.bg {
+  &-grey {
+    @include selection($main-color, $bg-grey);
+    background-color: $bg-grey;
+    color: $black-color;
+
+    .text-link {
+      color: $main-sat-color;
+      font-weight: $font-weight-bold;
+    }
+
+  }
+
+  &-white {
+    @include selection(rgba($main-color, .75), #fff);
+    background-color: $bg-white;
+    color: $black-color;
+  }
+
+  &-main {
+    @include selection(#fff, $bg-main);
+    background: linear-gradient(to bottom,
+      rgba($main-color, 1) 0%,
+      rgba($main-sat-color, 1) 45%,
+      rgba($main-sat-color, 1) 55%,
+      rgba($main-color, 1) 100%);
+    background-color: $bg-main;
+    background-size: 400% 400%;
+    color: $white-color;
+
+    a {
+      border-bottom-color: rgba($white-color, .4);
+      text-shadow: none;
+      color: $white-color;
+      font-weight: $font-weight-medium;
+
+      &:hover {
+        border-bottom-color: rgba($white-color, 1);
+      }
+    }
+
+    &-reverse {
+      background: linear-gradient(to bottom,
+        rgba($main-sat-color, 1) 0%,
+        rgba($main-color, 1) 100%);
+    }
+
+    .button {
+      color: $main-sat-color;
+    }
+  }
+}

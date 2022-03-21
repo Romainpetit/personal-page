@@ -3,27 +3,11 @@ title: Resume
 description: This is a .md file
 ---
 
-<!-- ## Custom components -->
-
-<!-- <img :src="require(`~/assets/images/avatar-couleur.jpg`)" alt="Romain Petit, front-end web developer." /> -->
 <img src="~/assets/images/avatar-couleur.jpg" />
 <img src="../assets/images/avatar-couleur.jpg" />
 <img src="@/assets/images/avatar-couleur.jpg" />
 
-<!-- <movie-info name="Porco Rosso">
-  <template #summary>
-
-Porco Rosso (Japanese: 紅の豚, Hepburn: _Kurenai no Buta_, lit. _Crimson Pig_) is a
-1992 Japanese animated comedy-adventure film written and directed by
-[Hayao Miyazaki]. It is based on _Hikōtei Jidai_ ("The Age of the Flying Boat"), a
-three-part 1989 watercolor manga by Miyazaki.
-
-[hayao miyazaki]: https://en.wikipedia.org/wiki/Hayao_Miyazaki
-
-  </template>
-</movie-info> -->
-
-## Hi there, I’m Romain!
+## Web meanderings
 
 ## I make web products & teach web development.
 
@@ -115,67 +99,6 @@ three-part 1989 watercolor manga by Miyazaki.
   </a>
 </div>
 
-<!-- [Markdown Link to Blog](/articles)
-
-<a href="https://nuxtjs.org">External link html</a>
-
-[External Link markdown](https://nuxtjs.org) -->
-
-#### [Back Market](https://www.backmarket.fr/)
-
-Oct. 2020 → Present
-
-_Remote._
-
-- Putting up a new e-commerce portal with Vue.js & Nuxt.js, that consumes various data from Algolia and internal REST Api.
-- Design System: addition of components and technical specs. Vue.js, Typescript, Storybook, Figma.
-- SEO Focus: SSR, semantic & accessible DOM, and web performances.
-- Pair reviews and best pratices improvement with the front-end team.
-
-#### [Vicat](https://www.vicat.com/)
-
-Jun. 2020 → Oct. 2020
-
-_Remote._
-
-- Creation of a complete hybrid web app with Vue Native & Tailwind, using MeteorJS as backend.
-- Platform that digitalizes issuing and tracking of suppliers delivery forms in the concrete industry.
-
-#### [Human Coders](https://www.humancoders.com/)
-
-Jan. 2020 → Present
-
-_Paris, Remote._
-
-Training teams to use technologies I love through short & intensive sessions—even remotely:
-
-- [Vue.js](https://www.humancoders.com/formations/vue-js)
-- Nuxt.js
-- [Web accessibility](https://www.humancoders.com/formations/accessibilite-numerique)
-
-#### [Le Campus Numérique in the Alps](https://www.le-campus-numerique.fr/)
-
-Dec. 2017 → Present
-
-_Grenoble, Remote._
-
-- Teaching Vue.js, JavaScript, HTML/CSS & Project management modules.
-- Building courses outlines and activities with a practice-first approach.
-- Creation of internal pedagogical tools.
-- Individually tutoring a few learners all along the dual training cursus.
-- Launching new programs from scratch like [Data Asperger](https://t.co/tlmPsZFEVH).
-  Learned a whole lot about how to create effective educational content.
-
-#### [InviteRobot](https://inviterobot.com/)
-
-Jul. 2016 → Present
-
-_Remote._
-
-- SaaS Product creation.
-- Helps makers create paid online communities. For Slack teams.
-- Slack & Stripe API, JavaScript, Ruby.
-
 #### [MyDigitalBuildings](https://mydigitalbuildings.com/)
 
 _Remote._
@@ -186,13 +109,6 @@ Nov. 2019 → Dec. 2019
 - Interface building for 3d navigation for corporate identity from Figma.
 - Focus on web accessibility as disabled people are the main users.
 
-#### [Nomades Advanced Technologies](http://nomades.ch/)
-
-Feb. 2018 → Jul. 2019
-
-_Geneva._
-
-- JavaScript & jQuery lessons for small groups.
 
 #### [Wide Agency](http://www.wideagency.com/)
 

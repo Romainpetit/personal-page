@@ -66,15 +66,15 @@ export default {
       home
     }
   },
+  head() {
+    return {
+      title: 'CSS Reference | 2-days course'
+    }
+  },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  },
-  head() {
-    return {
-      title: 'CSS Reference | 2-days course'
     }
   }
 }

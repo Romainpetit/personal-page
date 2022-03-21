@@ -14,19 +14,19 @@
     <!-- Missions listing -->
     <ul>
       <li v-for="mission in missions" :key="mission.slug">
-        <h2>{{ mission.position }}</h2>
-        <p>{{ mission.description }}</p>
         <a :href="mission.client.website">
           <strong>{{ mission.client.name }}</strong>
         </a>
-        <h4 v-if="mission.front">FRONT</h4>
+        <h2>{{ mission.position }}</h2>
+        <p>{{ mission.description }}</p>
+        <!-- <h4 v-if="mission.front">FRONT</h4>
         <div v-for="tech of mission.front" :key="tech">
           {{ tech }}
         </div>
         <h4 v-if="mission.back">BACK</h4>
         <div v-for="tech of mission.back" :key="tech">
           {{ tech }}
-        </div>
+        </div> -->
         <!-- <nuxt-content :document="mission" /> -->
       </li>
     </ul>
@@ -38,12 +38,20 @@ export default {
   async asyncData({ $content }) {
     const resume = await $content('resume').fetch()
 
-    let query = $content('missions', { deep: true }).sortBy('date', 'desc')
+    const query = $content('missions', { deep: true }).sortBy(
+      'date-start',
+      'desc'
+    )
     const missions = await query.fetch()
 
     return {
       resume,
       missions
+    }
+  },
+  head() {
+    return {
+      title: 'Romain Petit'
     }
   }
 }

@@ -1,0 +1,162 @@
+@mixin auto-width() {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin percent-width($property, $columns, $count) {
+  #{$property}: ((100% / $columns) * $count);
+}
+
+@mixin percent-offset($property, $columns, $count) {
+  $single-column-width: ((100% / $columns) * 1);
+  #{$property}: $single-column-width * $count;
+}
+
+@mixin queries($key, $queries: $queries) {
+  $query: map-get($queries, $key);
+  @if ($query == $default-query) {
+    @content;
+  } @else {
+    @media screen and (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+
+@mixin queries-custom($queries) {
+  @media screen and (min-width: #{$queries}) {
+    @content;
+  }
+}
+
+@mixin containers($selector: $container-selector, $queries: $queries) {
+  @each $size in $sizes {
+    $query: map-get($containers, $size);
+    $query-p: map-get($containers-p, $size);
+
+    @include queries($size, $queries) {
+      #{$selector} {
+        margin: 0 auto;
+        padding-right: #{$query-p};
+        padding-left: #{$query-p};
+        width: #{$query};
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@mixin fluid-containers(
+  $selector: $fluid-container-selector,
+  $queries: $queries
+) {
+  @each $size in $sizes {
+    $query: map-get($containers, $size);
+    $query-p: map-get($fluid-containers-p, $size);
+
+    @include queries($size, $queries) {
+      #{$selector} {
+        margin: 0 auto;
+        padding-right: #{$query-p};
+        padding-left: #{$query-p};
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@mixin fonts($selector: $font-selector, $queries: $queries) {
+  @each $size in $sizes {
+    $query: map-get($fonts, $size);
+    $base: map-get($line-heights, $size);
+
+    @include queries($size, $queries) {
+      #{$selector} {
+        line-height: #{$base};
+        font-size: #{$query};
+      }
+    }
+  }
+}
+
+@mixin columns(
+  $selector: $column-selector,
+  $properties: $column-properties,
+  $columns: $column-count,
+  $queries: $queries
+) {
+  @each $size in $sizes {
+    $iterator-selector: '';
+    @for $i from 0 through $columns {
+      @if ($i == 0) {
+        $iterator-selector: #{$selector}#{$block-delimiter}#{$size};
+      } @else {
+        $iterator-selector: #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i};
+      }
+
+      #{$iterator-selector} {
+        @extend %column;
+      }
+    }
+
+    @include queries($size, $queries) {
+      @for $i from 0 through $columns {
+        @if ($i == 0) {
+          #{$selector}#{$block-delimiter}#{$size} {
+            @content;
+            @include auto-width();
+          }
+        } @else {
+          #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
+            @content;
+            @each $prop in $properties {
+              @include percent-width($prop, $columns, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin offsets(
+  $selector: $column-selector,
+  $modifier-selector: $offset-modifier,
+  $properties: $offset-properties,
+  $columns: $column-count,
+  $queries: $queries
+) {
+  @each $size in $sizes {
+    @for $i from 1 through $columns {
+      #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
+        @extend %column;
+      }
+    }
+
+    @include queries($size, $queries) {
+      @for $i from 1 through $columns {
+        #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
+          @content;
+          @each $prop in $properties {
+            @include percent-offset($prop, $columns, $i);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Generates class names for each breakpoint
+@mixin generate-breakpoints($selector, $queries: $queries) {
+  @each $size in $sizes {
+    #{$selector}#{$modifier-delimiter}#{$size} {
+      @include queries($size, $queries) {
+        @content;
+      }
+    }
+  }
+}
