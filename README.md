@@ -1,60 +1,34 @@
-[![nuxt-content](https://content.nuxtjs.org/preview.png)](https://content.nuxtjs.org)
+# CSS outline for 2 days
 
-# @nuxt/content
+Single page site with the speech outline
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
-[![Codecov][codecov-src]][codecov-href]
-[![License][license-src]][license-href]
-[![lerna][lerna-src]][lerna-href]
+---
 
-> @nuxt/content lets you write in a content/ directory, acting as Git-based Headless CMS
+View this site live on https://romainpetit.github.io/css-avance-2021/
 
-- [🎲 &nbsp;Play on CodeSandbox](https://codesandbox.io/s/nuxtcontent-demo-l164h?)
-- [🎬 &nbsp;Demonstration videos](https://content.nuxtjs.org/#videos)
-- [✨ &nbsp;Release Notes](https://github.com/nuxt/content/releases)
-- [📖 &nbsp;Read the documentation](https://content.nuxtjs.org)
+The [content module](https://content.nuxtjs.org/) is a git files based headless CMS that provides powerful features when it comes to write blogs, documentation sites or just adding content to any regular website. In this post we will go through most of the benefits of this module and discover how we can create a blog with it.
 
-## Features
+For detailed explanation on how to create this blog, check out [the tutorial](https://nuxtjs.org/blog/creating-blog-with-nuxt-content).
 
-- Blazing fast hot reload in development
-- Vue components in Markdown
-- Full-text search
-- Support static site generation with `nuxt generate`
-- Powerful QueryBuilder API (MongoDB like)
-- Syntax highlighting to code blocks in markdown files using PrismJS.
-- Table of contents generation
-- Handles Markdown, CSV, YAML, JSON(5), XML
-- Extend with hooks
+Click here to view the [demo](https://blog-with-nuxt-content.netlify.app/)
 
-[📖 Read the documentation](https://content.nuxtjs.org)
+![css](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAacjB3YMxfqmQXZT0HwCw1H-uU8BI904g_A&usqp=CAU)
 
-## Development
+## Build Setup
 
-1. Clone this repository
-2. Install dependencies using `yarn install` or `npm install`
-3. Start development server using `yarn dev` or `npm run dev`
+```bash
+# install dependencies
+yarn
 
-## License
+# serve with hot reload at localhost:3000
+yarn dev
 
-[MIT License](./LICENSE)
+# generate static project
+yarn generate
 
-<!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxt/content/latest.svg
-[npm-version-href]: https://npmjs.com/package/@nuxt/content
+# deploy /dist to gh-pages
+yarn deploy
 
-[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxt/content.svg
-[npm-downloads-href]: https://npmjs.com/package/@nuxt/content
-
-[github-actions-ci-src]: https://github.com/nuxt/content/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/nuxt/content/actions?query=workflow%3Aci
-
-[codecov-src]: https://img.shields.io/codecov/c/github/nuxt/content.svg
-[codecov-href]: https://codecov.io/gh/nuxt/content
-
-[license-src]: https://img.shields.io/npm/l/@nuxt/content.svg
-[license-href]: https://npmjs.com/package/@nuxt/content
-
-[lerna-src]: https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg
-[lerna-href]: https://lerna.js.org/
+# view a production version of your app
+yarn start
+```
