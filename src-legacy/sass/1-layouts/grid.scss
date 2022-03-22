@@ -1,9 +1,9 @@
 $column-count: 12 !default;
-$column-selector: ".col" !default;
-$container-selector: ".container" !default;
-$fluid-container-selector: ".container-fluid" !default;
-$font-selector: ":root" !default;
-$offset-modifier: "offset" !default;
+$column-selector: '.col' !default;
+$container-selector: '.container' !default;
+$fluid-container-selector: '.container-fluid' !default;
+$font-selector: ':root' !default;
+$offset-modifier: 'offset' !default;
 $gutter-width: 1rem !default;
 $outer-margin: 4rem !default;
 $gutter-compensation: (($gutter-width / 2) * -1) !default;
@@ -69,124 +69,135 @@ $container-lg-p: 0;
 $container-xl-p: 0;
 $container-xxl-p: 0;
 // Breakpoints namespace
-$xs: "xs" !default;
-$sm: "sm" !default;
-$md: "md" !default;
-$lg: "lg" !default;
-$xl: "xl" !default;
-$xxl: "xxl" !default;
-$block-delimiter: "-" !default;
-$element-delimiter: "-" !default;
-$modifier-delimiter: "-" !default;
+$xs: 'xs' !default;
+$sm: 'sm' !default;
+$md: 'md' !default;
+$lg: 'lg' !default;
+$xl: 'xl' !default;
+$xxl: 'xxl' !default;
+$block-delimiter: '-' !default;
+$element-delimiter: '-' !default;
+$modifier-delimiter: '-' !default;
 $default-query: $viewport-xs !default;
 // Putting breakpoint related values in arrays
 $sizes: $xs $sm $md $lg $xl $xxl !default;
-$queries: (#{$xs}: #{$viewport-xs},
-#{$sm}: #{$viewport-sm},
-#{$md}: #{$viewport-md},
-#{$lg}: #{$viewport-lg},
-#{$xl}: #{$viewport-xl},
-#{$xxl}: #{$viewport-xxl}) !default;
+$queries: (
+  #{$xs}: #{$viewport-xs},
+  #{$sm}: #{$viewport-sm},
+  #{$md}: #{$viewport-md},
+  #{$lg}: #{$viewport-lg},
+  #{$xl}: #{$viewport-xl},
+  #{$xxl}: #{$viewport-xxl}
+) !default;
 $queries-v: (#{$xs}: #{$viewport-v-xs}, #{$sm}: #{$viewport-v-sm}) !default;
-$fonts: (#{$xs}: #{$font-xs},
-#{$sm}: #{$font-sm},
-#{$md}: #{$font-md},
-#{$lg}: #{$font-lg},
-#{$xl}: #{$font-xl},
-#{$xxl}: #{$font-xxl}) !default;
-$line-heights: (#{$xs}: #{$line-height-xs},
-#{$sm}: #{$line-height-sm},
-#{$md}: #{$line-height-md},
-#{$lg}: #{$line-height-lg},
-#{$xl}: #{$line-height-xl},
-#{$xxl}: #{$line-height-xxl}) !default;
-$containers: (#{$xs}: #{$container-xs},
-#{$sm}: #{$container-sm},
-#{$md}: #{$container-md},
-#{$lg}: #{$container-lg},
-#{$xl}: #{$container-xl},
-#{$xxl}: #{$container-xxl}) !default;
-$fluid-containers-p: (#{$xs}: #{$fluid-container-xs-p},
-#{$sm}: #{$fluid-container-sm-p},
-#{$md}: #{$fluid-container-md-p},
-#{$lg}: #{$fluid-container-lg-p},
-#{$xl}: #{$fluid-container-xl-p},
-#{$xxl}: #{$fluid-container-xxl-p}) !default;
-$containers-p: (#{$xs}: #{$container-xs-p},
-#{$sm}: #{$container-sm-p},
-#{$md}: #{$container-md-p},
-#{$lg}: #{$container-lg-p},
-#{$xl}: #{$container-xl-p},
-#{$xxl}: #{$container-xxl-p}) !default;
-$column-properties: "flex-basis",
-"max-width" !default;
-$offset-properties: "margin-left" !default;
+$fonts: (
+  #{$xs}: #{$font-xs},
+  #{$sm}: #{$font-sm},
+  #{$md}: #{$font-md},
+  #{$lg}: #{$font-lg},
+  #{$xl}: #{$font-xl},
+  #{$xxl}: #{$font-xxl}
+) !default;
+$line-heights: (
+  #{$xs}: #{$line-height-xs},
+  #{$sm}: #{$line-height-sm},
+  #{$md}: #{$line-height-md},
+  #{$lg}: #{$line-height-lg},
+  #{$xl}: #{$line-height-xl},
+  #{$xxl}: #{$line-height-xxl}
+) !default;
+$containers: (
+  #{$xs}: #{$container-xs},
+  #{$sm}: #{$container-sm},
+  #{$md}: #{$container-md},
+  #{$lg}: #{$container-lg},
+  #{$xl}: #{$container-xl},
+  #{$xxl}: #{$container-xxl}
+) !default;
+$fluid-containers-p: (
+  #{$xs}: #{$fluid-container-xs-p},
+  #{$sm}: #{$fluid-container-sm-p},
+  #{$md}: #{$fluid-container-md-p},
+  #{$lg}: #{$fluid-container-lg-p},
+  #{$xl}: #{$fluid-container-xl-p},
+  #{$xxl}: #{$fluid-container-xxl-p}
+) !default;
+$containers-p: (
+  #{$xs}: #{$container-xs-p},
+  #{$sm}: #{$container-sm-p},
+  #{$md}: #{$container-md-p},
+  #{$lg}: #{$container-lg-p},
+  #{$xl}: #{$container-xl-p},
+  #{$xxl}: #{$container-xxl-p}
+) !default;
+$column-properties: 'flex-basis', 'max-width' !default;
+$offset-properties: 'margin-left' !default;
 
-@mixin mt-base($multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function mt-base($multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      margin-top: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: ($multiplier * $base);
+//       margin-top: $total; // @return $value;
+//     }
+//   }
+// }
 
-@mixin mb-base($multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function mb-base($multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      margin-bottom: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: ($multiplier * $base);
+//       margin-bottom: $total; // @return $value;
+//     }
+//   }
+// }
 
-@mixin pt-base($multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function pt-base($multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      padding-top: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: ($multiplier * $base);
+//       padding-top: $total; // @return $value;
+//     }
+//   }
+// }
 
-@mixin pb-base($multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function pb-base($multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      padding-bottom: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: ($multiplier * $base);
+//       padding-bottom: $total; // @return $value;
+//     }
+//   }
+// }
 
-@mixin base($property, $multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function base($property, $multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      #{$property}: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: #{$multiplier * $base};
+//       #{$property}: $total; // @return $value;
+//     }
+//   }
+// }
 
-@mixin lh-base($multiplier, $queries: $queries) {
-  @each $size in $sizes {
-    $base: map-get($line-heights, $size);
+// @function lh-base($multiplier, $queries: $queries) {
+//   @each $size in $sizes {
+//     $base: map-get($line-heights, $size);
 
-    @include queries($size, $queries) {
-      $total: ($multiplier * $base);
-      line-height: $total; // @return $value;
-    }
-  }
-}
+//     @include queries($size, $queries) {
+//       $total: ($multiplier * $base);
+//       line-height: $total; // @return $value;
+//     }
+//   }
+// }
 
 .layout {
   display: flex;

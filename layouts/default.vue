@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -29,12 +29,4 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-// @import '~/assets/sass/0-vendors/sanitize';
-// @import '~/assets/sass/1-layouts/layout-dir';
-// @import '~/assets/sass/2-base/base-dir';
-// @import '~/assets/sass/3-modules/modules-dir';
-// // Helpers are high specificity
-// @import '~/assets/sass/2-base/helpers';
-// @import '~/assets/sass/2-base/positionning';
 </style>
