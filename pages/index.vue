@@ -1,12 +1,20 @@
 <template>
   <div>
-    <div class="bg-main py1 pb0"></div>
+    <!-- <div class="bg-main py1">
+      <div class="container">
+        <div class="title-1 m0 center">Romain Petit</div>
+      </div>
+    </div> -->
+
+    <div class="bg-main py1 pb0">
+      <div class="container"></div>
+    </div>
 
     <div class="bg-white">
-      <div class="container mt2 center-align-xs left-align-sm">
+      <div class="container mt1 center-align-xs left-align-md">
         <div class="row">
           <div
-            class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-3 col-xl-offset-1 align-self-center"
+            class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xl-offset-1 align-self-center"
           >
             <img
               class="img-rounded"
@@ -15,12 +23,12 @@
             />
           </div>
           <div
-            class="col-xs-12 col-sm-8 col-md-8 col-lg-9 col-xl-8 align-self-center"
+            class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-8 align-self-center"
           >
-            <h2 class="copy">
-              Hi there, I’m Romain !<br />
-              <strong>I make web products &amp; teach web development.</strong>
-            </h2>
+            <h1 class="copy">
+              <strong>Romain Petit 👋<br /></strong>
+              I'm into front-end developement since 2011.<br />
+            </h1>
             <div class="platforms">
               <a
                 id="linkedin"
@@ -111,8 +119,32 @@
       </li>
     </ul> -->
 
+      <!-- Training listing -->
+
       <div class="container">
-        <!-- Missions listing -->
+        <div class="title-3 center">Teaching web development.</div>
+
+        <p class="mt1 mb0 title-uppercase">Previous:</p>
+        <ul>
+          <li v-for="formation in formations" :key="formation.slug">
+            <h2 class="title-1 text-inline">
+              <a
+                class="link"
+                :href="formation.client.website"
+                target="_blank"
+                rel="nofollow"
+              >
+                {{ formation.client.name }}
+              </a>
+            </h2>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Missions listing -->
+
+      <div class="container">
+        <div class="title-3 center">Building web products.</div>
         <ul>
           <li v-for="mission in missions" :key="mission.slug">
             <h2 class="title-1 text-inline">
@@ -125,9 +157,8 @@
                 {{ mission.client.name }}
               </a>
             </h2>
-            —
-            {{ mission.position }}
-            <p>{{ mission.description }}</p>
+            <!-- — {{ mission.position }} -->
+            <!-- <p>{{ mission.description }}</p> -->
             <!-- <h4 v-if="mission.front">FRONT</h4>
         <div v-for="tech of mission.front" :key="tech">
           {{ tech }}
@@ -140,6 +171,33 @@
           </li>
         </ul>
       </div>
+
+      <div class="bg-main bg-main-reverse">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content mt2 mb3 center"
+            >
+              <h2 class="light mb1">
+                For the last <strong>7 years</strong>, I have been building
+                digital products.
+              </h2>
+              <h3 class="light mb1 text-xs color-white-faded">
+                I'm a freelancer available for hire !
+              </h3>
+              <div class="clear center">
+                <a
+                  id="email"
+                  class="button"
+                  target="_top"
+                  href="mailto:contact@romainpetit.com?Subject=Oh%20I%20would%20love%20to%20work%20with%20you%20Romain"
+                  >Contact me</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -149,15 +207,22 @@ export default {
   async asyncData({ $content }) {
     const resume = await $content('resume').fetch()
 
-    const query = $content('missions', { deep: true }).sortBy(
-      'date-start',
+    const queryMissions = $content('missions', { deep: true }).sortBy(
+      'date-finish',
       'desc'
     )
-    const missions = await query.fetch()
+
+    const queryFormations = $content('formations', { deep: true }).sortBy(
+      'date-finish',
+      'desc'
+    )
+    const missions = await queryMissions.fetch()
+    const formations = await queryFormations.fetch()
 
     return {
       resume,
-      missions
+      missions,
+      formations
     }
   },
   head() {
@@ -167,13 +232,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.container {
-  margin: 20px;
-}
-
-h4 {
-  margin-top: 1rem;
-}
-</style>

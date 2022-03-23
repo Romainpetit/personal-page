@@ -8,6 +8,7 @@ position: 'Instructor & Program builder'
 description: Vue.js, Javascript, HTML+CSS & Project management lessons, in a "flipped classroom" educational model.
 date-start: 2017-12-01
 date-finish: 2021-06-31
+active: false
 front:
   -
 back:

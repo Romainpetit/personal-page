@@ -6,7 +6,7 @@ imgUrl:
 position: 'Senior Front end developer'
 description: Vue.js, Javascript, Nuxt.
 date-start: 2020-10-01
-date-finish:
+date-finish: 2023-10-01
 front:
   -
 back:

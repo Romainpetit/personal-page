@@ -5,34 +5,6 @@ description: This is a .md file
 
 <!-- <nuxt-link to="/articles">Nuxt Link to Blog</nuxt-link>
 
-#### [MyDigitalBuildings](https://mydigitalbuildings.com/)
-
-_Remote._
-
-Nov. 2019 → Dec. 2019
-
-- POC of a 3d WebGL viewer in React.js, and (Potree.js)[https://github.com/potree/potree]
-- Interface building for 3d navigation for corporate identity from Figma.
-- Focus on web accessibility as disabled people are the main users.
-
-#### [Wide Agency](http://www.wideagency.com/)
-
-Apr. 2018 → Jul. 2019
-
-_Geneva, Remote._
-
-- Web accessibility: Making world renown watchmakers e-commerce websites comply to WCAG 2.0 level AA.
-- UAT and cross browser testing. Use of screenreaders like JAWS, NVDA, VoiceOver.
-- HTML/SASS/ES6 integration of high-fidelity mockups.
-
-#### [Université Grenoble Alpes](https://www.univ-grenoble-alpes.fr/)
-
-Nov. 2017 → Jun 2019
-
-_Grenoble._
-
-- Teaching React.js & Vue.js development, Web performance, Mobile web culture.
-- Associate and Bachelor degree students for the public sector.
 
 #### [Bearer.sh](https://www.bearer.sh/)
 
