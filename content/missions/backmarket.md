@@ -1,6 +1,6 @@
 ---
 client:
-  name: Back Market
+  name: BackMarket
   website: https://www.backmarket.fr/
 imgUrl:
 position: 'Senior Front end developer'
