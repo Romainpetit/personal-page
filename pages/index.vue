@@ -23,7 +23,7 @@
             />
           </div>
           <div
-            class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-8 align-self-center"
+            class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-8 align-self-center mt1 mt0-sm"
           >
             <h1 class="copy">
               <strong>Romain Petit 👋<br /></strong>
@@ -49,7 +49,7 @@
       <!-- Training listing -->
 
       <div class="container">
-        <div class="title-3 center">Teaching web development.</div>
+        <div class="title-2 center">Teaching web development.</div>
 
         <h2 class="light text-inline">
           Teams training in topics I love: Vue.js, Nuxt, Modern JavaScript,
@@ -92,7 +92,7 @@
       <!-- Missions listing -->
 
       <div class="container">
-        <div class="title-3 center">Building web products.</div>
+        <div class="title-2 center">Building web products.</div>
         <h2 class="light text-inline">
           Front-end developement with a strong focus on accessibility, in the
           Vue.js ecosystem. For
