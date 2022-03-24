@@ -1,81 +1,45 @@
-# personal-page
-Source served on http://romainpetit.com - My personal page
+# Personal page
 
-![Node 4.4.0](https://img.shields.io/badge/node-4.4.0-f39f37.svg)
+## Build Setup
 
-# Contributing :
-1. **Fork this repo**
-and stay on master branch 
+```bash
+# install dependencies
+yarn
 
-1. **Install required gulp modules**
-   `$ npm install`
+# serve with hot reload at localhost:3000
+yarn dev
 
-    *Windows:*
-    May require to run console as admin.
- 
-    *Mac:*
-    Sudo may be required. `$ sudo npm install`
+# generate static project
+yarn generate
 
-2. **Run a project build**
+# deploy /dist to gh-pages
+yarn deploy
 
-   `$ gulp`
+# view a production version of your app
+yarn start
+```
 
-3. Watch project modifications, use livereload and start a local server *(optional)*
+## Depencencies
 
-   `$ gulp watch`
-4. **Open the result in your browser**
+### Nuxt content
 
-   *Without local server* : `open dist/index.html`
+The [content module](https://content.nuxtjs.org/) is a git files based headless CMS that provides powerful features when it comes to write blogs, documentation sites or just adding content to any regular website. In this post we will go through most of the benefits of this module and discover how we can create a blog with it.
 
-   *With local server* : `open http://localhost:8080/`
+For detailed explanation on how to create this blog, check out [the tutorial](https://nuxtjs.org/blog/creating-blog-with-nuxt-content).
 
-5. **Open src/ as workspace in your IDE and make your changes**
+Click here to view the [demo](https://blog-with-nuxt-content.netlify.app/)
 
-6. **Run a project build**
+![css](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAacjB3YMxfqmQXZT0HwCw1H-uU8BI904g_A&usqp=CAU)
 
-   `$ gulp`
-
-   and watch result in browser. This is automatically triggered if you ran `$ gulp watch`
-
-7. **Once changes are done deploy the result**
-
-   `$ gulp deploy`
-
-8. **Commit your changes**
-
-
-# Troubleshooting :
-
-#### If you want more details on the tasks being run, use
-`$ gulp --verbose`
-
-#### You need to have Ruby installed. If not, run
-`$ npm install ruby-sass`
-
-#### Error during gulp lint task
-You need to have the scss_lint ruby gem.
-
-`sudo gem install scss_lint`
-
-#### Livereload not working
-install the Livereload extension on your browser.
-Turn it on on your tab, re-run `$gulp watch` and reload manually once.
-
-# Dependencies :
-
-#### Sanitize.scss
-[https://www.npmjs.com/package/sanitize.scss](https://www.npmjs.com/package/sanitize.scss)
-sanitize.css ported to sass
-
-It is located in `src/sass/0-vendors/sanitize.scss` and called in `src/sass/app.scss`
-
-#### Metrical.scss
+### Metrical.scss
 
 This is the responsive vertical library used across the project.
 Use like this:
+
 ```
 .layout {
     @include base(padding-bottom, 1);
 }
 ```
+
 Will result of `.layout` having a `padding-bottom` of 1 responsive **base unit**.
