@@ -5,9 +5,10 @@ client:
 imgUrl: 
 location: Remote
 position: 'Maker'
-description: SaaS Software: Helps makers create paid online communities. For Slack teams.
+description: "SaaS Software: Helps makers create paid online communities. For Slack teams."
 date-start: 2016-07-01
 date-finish: 
+active: true
 front:
   - 
 back:

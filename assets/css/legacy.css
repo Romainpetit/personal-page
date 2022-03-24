@@ -245,14 +245,6 @@ table {
   clip: auto;
 }
 
-.layout {
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .container,
 .container-fluid {
   margin: 0 auto;
@@ -854,11 +846,11 @@ body {
 }
 
 a .icon {
-  fill: #202f33;
+  fill: #f5f6fa;
 }
 
 a:hover .icon {
-  fill: #0080d0;
+  fill: #fff;
 }
 
 .link {
@@ -883,7 +875,6 @@ a:hover .icon {
   color: #f5f6fa;
 }
 
-.copy,
 p {
   margin-bottom: 29px;
 }
@@ -917,8 +908,33 @@ hr:before {
   position: relative;
 }
 
-.bg-grey,
-.button {
+.layout {
+  position: relative;
+}
+
+.layout::after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  content: '';
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(http://basehold.it/i/24);
+  background-size: 4px 24px;
+  transition: opacity 0.2s;
+  opacity: 0.09;
+}
+
+.layout:active::after {
+  opacity: 0;
+}
+
+.bg-grey {
   background-color: #f5f6fa;
 }
 
@@ -940,10 +956,6 @@ blockquote {
   margin: 0;
 }
 
-.layout {
-  background-image: url(http://basehold.it/i/29/);
-}
-
 .main-content > * {
   animation: fadein 1s ease-in-out;
 }
@@ -958,33 +970,25 @@ blockquote {
   }
 }
 
-#layout.off {
-  background-image: none !important;
-}
-
 .button {
   font-size: 14.5px;
-  border-radius: 14.5px;
+  /* border-radius: 14.5px; */
+  border: 2px solid rgba(245, 246, 250, 0.4);
   display: inline-block;
-  transition: transform 0.15s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-  color: #0067a7;
+  transition: border-color 0.15s cubic-bezier(0.6, -0.28, 0.74, 0.05),
+    color 0.15s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  /* color: #0067a7; */
   appearance: none;
   padding: 10.15px 29px;
 }
 
 .button:focus,
 .button:hover {
-  transform: scale(1.09);
-}
-
-.button:active,
-.button:hover:active {
-  transform: scale(0.95);
+  border-color: white;
 }
 
 .img-rounded {
   border-radius: 50%;
-  margin-bottom: 1rem;
   width: 116px;
 }
 
@@ -1095,10 +1099,6 @@ blockquote {
 
 .bg-main-reverse {
   background: linear-gradient(to bottom, #0067a7 0, #0080d0 100%);
-}
-
-.bg-main .button {
-  color: #0067a7;
 }
 
 @font-face {
@@ -1215,10 +1215,6 @@ blockquote {
   margin: 0;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.platforms svg {
-  float: left;
 }
 
 .color-white-faded {
@@ -1599,7 +1595,6 @@ blockquote {
     padding-bottom: 33px;
   }
 
-  .copy,
   p {
     margin-bottom: 33px;
   }
@@ -1608,13 +1603,13 @@ blockquote {
     height: 33px;
   }
 
-  .layout {
+  .layout::after {
     background-image: url(http://basehold.it/i/33/);
+    background-size: 4px 33px;
   }
 
   .button {
     font-size: 16.5px;
-    border-radius: 16.5px;
     padding: 11.55px 33px;
   }
 
@@ -1708,11 +1703,6 @@ blockquote {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-  }
-
-  .platforms {
-    -ms-flex-pack: left;
-    justify-content: left;
   }
 
   .container {
@@ -1911,7 +1901,6 @@ blockquote {
     padding-bottom: 36px;
   }
 
-  .copy,
   p {
     margin-bottom: 36px;
   }
@@ -1920,13 +1909,13 @@ blockquote {
     height: 36px;
   }
 
-  .layout {
+  .layout::after {
     background-image: url(http://basehold.it/i/36/);
+    background-size: 4px 36px;
   }
 
   .button {
     font-size: 18px;
-    border-radius: 18px;
     padding: 12.6px 36px;
   }
 
@@ -2219,7 +2208,6 @@ blockquote {
     padding-bottom: 36px;
   }
 
-  .copy,
   p {
     margin-bottom: 36px;
   }
@@ -2230,7 +2218,6 @@ blockquote {
 
   .button {
     font-size: 18px;
-    border-radius: 18px;
     padding: 12.6px 36px;
   }
 
@@ -2523,7 +2510,6 @@ blockquote {
     padding-bottom: 39px;
   }
 
-  .copy,
   p {
     margin-bottom: 39px;
   }
@@ -2532,13 +2518,13 @@ blockquote {
     height: 39px;
   }
 
-  .layout {
+  .layout::after {
     background-image: url(http://basehold.it/i/39/);
+    background-size: 4px 39px;
   }
 
   .button {
     font-size: 19.5px;
-    border-radius: 19.5px;
     padding: 13.65px 39px;
   }
 
@@ -2831,7 +2817,6 @@ blockquote {
     padding-bottom: 42px;
   }
 
-  .copy,
   p {
     margin-bottom: 42px;
   }
@@ -2840,13 +2825,13 @@ blockquote {
     height: 42px;
   }
 
-  .layout {
+  .layout::after {
     background-image: url(http://basehold.it/i/42/);
+    background-size: 4px 36px;
   }
 
   .button {
     font-size: 21px;
-    border-radius: 21px;
     padding: 14.7px 42px;
   }
 

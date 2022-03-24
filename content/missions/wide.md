@@ -7,6 +7,7 @@ position:
 description:
 date-start: 2018-04-01
 date-finish: 2019-07-01
+active: false
 front:
   -
 back:

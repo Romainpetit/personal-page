@@ -55,42 +55,20 @@ a {
 }
 
 .link {
-  border-bottom: 1px solid rgba($main-color, .5);
+  border-bottom: 1px solid rgba($main-color, 0.5);
   text-decoration: none;
-  text-shadow: $white-color .5px .5px,
-    $white-color -.5px .5px,
-    $white-color 1px 1px,
-    $white-color -1px 1px,
-    $white-color 1.5px 1.5px,
-    $white-color -1.5px 1.5px,
-    $white-color -2px 1px,
-    $white-color -2px 1.5px,
-    $white-color 2px 1px,
-    $white-color 2px 1.5px,
-    $white-color 2px 2px,
-    $white-color -2px 2px,
-    $white-color 2.5px 2.5px,
-    $white-color -2.5px 2.5px,
-    $white-color 3px 3px,
-    $white-color -3px 3px,
-    $white-color 2.5px 3px,
-    $white-color -2.5px 3px,
-    $white-color 0 .5px,
-    $white-color 0 1px,
-    $white-color 0 1.5px,
-    $white-color 0 2px,
-    $white-color 0 2.5px,
-    $white-color 0 3px,
-    $white-color 1px 4px,
-    $white-color -1px 4px,
-    $white-color 1px 3.5px,
-    $white-color -1px 3.5px,
-    $white-color 1px 3px,
-    $white-color -1px 3px,
-    $white-color 1px 2.5px,
-    $white-color -1px 2.5px,
-    $white-color 1px 2px,
-    $white-color -1px 2px;
+  text-shadow: $white-color 0.5px 0.5px, $white-color -0.5px 0.5px,
+    $white-color 1px 1px, $white-color -1px 1px, $white-color 1.5px 1.5px,
+    $white-color -1.5px 1.5px, $white-color -2px 1px, $white-color -2px 1.5px,
+    $white-color 2px 1px, $white-color 2px 1.5px, $white-color 2px 2px,
+    $white-color -2px 2px, $white-color 2.5px 2.5px, $white-color -2.5px 2.5px,
+    $white-color 3px 3px, $white-color -3px 3px, $white-color 2.5px 3px,
+    $white-color -2.5px 3px, $white-color 0 0.5px, $white-color 0 1px,
+    $white-color 0 1.5px, $white-color 0 2px, $white-color 0 2.5px,
+    $white-color 0 3px, $white-color 1px 4px, $white-color -1px 4px,
+    $white-color 1px 3.5px, $white-color -1px 3.5px, $white-color 1px 3px,
+    $white-color -1px 3px, $white-color 1px 2.5px, $white-color -1px 2.5px,
+    $white-color 1px 2px, $white-color -1px 2px;
   color: $darker-black-color;
 
   &:hover,
@@ -118,11 +96,13 @@ hr {
     position: absolute;
     top: -1px;
     animation: flow 1s ease infinite;
-    background: linear-gradient(to right,
+    background: linear-gradient(
+      to right,
       rgba($main-color, 1) 0%,
-      rgba($main-color, .75) 40%,
-      rgba($main-color, .75) 60%,
-      rgba($main-color, 1) 100%);
+      rgba($main-color, 0.75) 40%,
+      rgba($main-color, 0.75) 60%,
+      rgba($main-color, 1) 100%
+    );
     background-size: 400% 400%;
     width: 100%;
     height: 0;
@@ -149,6 +129,7 @@ blockquote {
 
 .layout {
   position: relative;
+  background-repeat: repeat;
   background-image: url('http://basehold.it/i/29/');
 
   @include queries($sm) {
@@ -169,7 +150,7 @@ blockquote {
 }
 
 .main-content {
-  >* {
+  > * {
     animation: fadein 1s ease-in-out;
   }
 }
@@ -184,19 +165,15 @@ blockquote {
   }
 }
 
-#layout.off {
-  background-image: none !important;
-}
-
 .button {
-  @include base(font-size, .5);
-  @include base(border-radius, .5);
-  @include base(padding-top, .35);
-  @include base(padding-bottom, .35);
+  @include base(font-size, 0.5);
+  @include base(border-radius, 0.5);
+  @include base(padding-top, 0.35);
+  @include base(padding-bottom, 0.35);
   @include base(padding-left, 1);
   @include base(padding-right, 1);
   display: inline-block;
-  transition: transform .15s cubic-bezier(.6, -.28, .74, .05);
+  transition: transform 0.15s cubic-bezier(0.6, -0.28, 0.74, 0.05);
   background-color: rgba($white-color, 1);
   cursor: pointer;
   text-transform: uppercase;
@@ -212,7 +189,7 @@ blockquote {
 
   &:hover:active,
   &:active {
-    transform: scale(.95);
+    transform: scale(0.95);
   }
 }
 

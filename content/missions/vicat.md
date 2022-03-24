@@ -7,6 +7,7 @@ position: 'Front end dev, react'
 description: React, React native.
 date-start: 2020-06-01
 date-finish: 2020-10-01
+active: false
 front:
   -
 back:

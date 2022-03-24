@@ -1,7 +1,7 @@
 ---
 client:
   name: Human Coders
-  website: https://www.humancoders.com/
+  website: https://www.humancoders.com/formateurs/romain-petit
 imgUrl:
 location: Remote
 position: 'Instructor & Program builder'
