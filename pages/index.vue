@@ -51,30 +51,31 @@
       <div class="container">
         <div class="title-3 center">Teaching web development.</div>
 
-        Teams training in topics I love: Vue.js, Nuxt, Modern JavaScript,
-        Accessibility & CSS.
-
-        <span v-for="formation in formations" :key="formation.slug">
-          <h2 v-if="formation.active" class="title-1 text-inline">
-            <a
-              class="link"
-              :href="formation.client.website"
-              target="_blank"
-              rel="nofollow"
-            >
-              {{ formation.client.name }}
-            </a>
-          </h2>
-        </span>
+        <h2 class="light text-inline">
+          Teams training in topics I love: Vue.js, Nuxt, Modern JavaScript,
+          Accessibility & CSS. With
+          <span v-for="formation in formations" :key="formation.slug">
+            <span v-if="formation.active" class="title-1 text-inline">
+              <a
+                class="link"
+                :href="formation.client.website"
+                target="_blank"
+                rel="nofollow"
+              >
+                {{ formation.client.name }}</a
+              >.
+            </span>
+          </span>
+        </h2>
 
         <p class="mt1 mb0 title-uppercase">Previous:</p>
         <ul>
           <li
             v-for="(formation, index) in formations"
             :key="formation.slug"
-            class="text-inline"
+            class="text-inline faded"
           >
-            <h2 v-if="!formation.active" class="title-1 text-inline">
+            <span v-if="!formation.active" class="title-1 text-inline">
               <a
                 class="link text-inline"
                 :href="formation.client.website"
@@ -83,7 +84,7 @@
                 >{{ formation.client.name }}</a
               ><span v-if="index + 1 !== formations.length">, </span
               ><span v-else>.</span>
-            </h2>
+            </span>
           </li>
         </ul>
       </div>
@@ -92,53 +93,46 @@
 
       <div class="container">
         <div class="title-3 center">Building web products.</div>
-
-        Teams training in topics I love: Vue.js, Nuxt, Modern JavaScript,
-        Accessibility & CSS.
-
-        <span v-for="mission in missions" :key="mission.slug">
-          <h2 v-if="mission.active" class="title-1 text-inline">
-            <a
-              class="link"
-              :href="mission.client.website"
-              target="_blank"
-              rel="nofollow"
-            >
-              {{ mission.client.name }}
-            </a>
-          </h2>
-        </span>
-
-        <p class="mt1 mb0 title-uppercase">Previous:</p>
-        <ul>
-          <li v-for="mission in missions" :key="mission.slug">
-            <h2 v-if="!mission.active" class="title-1 text-inline">
+        <h2 class="light text-inline">
+          Front-end developement with a strong focus on accessibility, in the
+          Vue.js ecosystem. For
+          <span v-for="mission in missions" :key="mission.slug">
+            <span v-if="mission.active" class="title-1 text-inline">
               <a
                 class="link"
                 :href="mission.client.website"
                 target="_blank"
                 rel="nofollow"
               >
-                {{ mission.client.name }}
-              </a>
-            </h2>
-            <!-- — {{ mission.position }} -->
-            <!-- <p>{{ mission.description }}</p> -->
-            <!-- <h4 v-if="mission.front">FRONT</h4>
-        <div v-for="tech of mission.front" :key="tech">
-          {{ tech }}
-        </div>
-        <h4 v-if="mission.back">BACK</h4>
-        <div v-for="tech of mission.back" :key="tech">
-          {{ tech }}
-        </div> -->
-            <!-- <nuxt-content :document="mission" /> -->
+                {{ mission.client.name }}</a
+              >.
+            </span>
+          </span>
+        </h2>
+
+        <p class="mt1 mb0 title-uppercase">Previous:</p>
+        <ul>
+          <li
+            v-for="(mission, index) in missions"
+            :key="mission.slug"
+            class="text-inline faded"
+          >
+            <span v-if="!mission.active" class="title-1 text-inline">
+              <a
+                class="link text-inline"
+                :href="mission.client.website"
+                target="_blank"
+                rel="nofollow"
+                >{{ mission.client.name }}</a
+              ><span v-if="index + 1 !== missions.length">, </span
+              ><span v-else>.</span>
+            </span>
           </li>
         </ul>
       </div>
 
       <div class="bg-main bg-main-reverse">
-        <div class="container">
+        <div class="container mt3">
           <div class="row">
             <div
               class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content mt2 mb3 center"

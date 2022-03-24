@@ -1002,6 +1002,10 @@ blockquote {
   color: #202f33;
 }
 
+.faded {
+  opacity: 0.8;
+}
+
 .color-red {
   color: #e64141;
 }

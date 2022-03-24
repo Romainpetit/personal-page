@@ -1,6 +1,6 @@
 ---
 client:
-  name: MyDigitalBuildings
+  name: My Digital Buildings
   website: https://mydigitalbuildings.com/
 imgUrl:
 position:
