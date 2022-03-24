@@ -70,9 +70,10 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {}
 
-  router: {
-    base: '/personal-page/'
-  }
+  // Site will be enventually served at apex point https://romainpetit.com
+  // router: {
+  //   base: '/personal-page/'
+  // }
 }
