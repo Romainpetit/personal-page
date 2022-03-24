@@ -266,7 +266,7 @@ export default {
   },
   head() {
     return {
-      title: 'Romain Petit'
+      title: 'Romain Petit - Front-end web developer'
     }
   }
 }

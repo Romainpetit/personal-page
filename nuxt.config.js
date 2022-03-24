@@ -42,9 +42,11 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     // '@nuxtjs/tailwindcss'
+    // https://google-analytics.nuxtjs.org/setup
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Nuxt.js modules
@@ -70,10 +72,14 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 
   // Site will be enventually served at apex point https://romainpetit.com
   // router: {
   //   base: '/personal-page/'
   // }
+
+  googleAnalytics: {
+    id: 'UA-47519414-1'
+  }
 }
