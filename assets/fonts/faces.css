@@ -1,0 +1,62 @@
+@font-face {
+  font-family: freight_text;
+  src: url(freighttextpro-book-webfont.eot);
+  src: url(freighttextpro-book-webfont.eot?#iefix) format('embedded-opentype'),
+    url(freighttextpro-book-webfont.woff2) format('woff2'),
+    url(freighttextpro-book-webfont.woff) format('woff'),
+    url(freighttextpro-book-webfont.ttf) format('truetype'),
+    url(freighttextpro-book-webfont.svg#freight_text_probook) format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: freight_text;
+  src: url(freighttextpro-bookitalic-webfont.eot);
+  src: url(freighttextpro-bookitalic-webfont.eot?#iefix)
+      format('embedded-opentype'),
+    url(freighttextpro-bookitalic-webfont.woff2) format('woff2'),
+    url(freighttextpro-bookitalic-webfont.woff) format('woff'),
+    url(freighttextpro-bookitalic-webfont.ttf) format('truetype'),
+    url(freighttextpro-bookitalic-webfont.svg#freight_text_probook_italic)
+      format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: freight_text;
+  src: url(freighttextpro-demibold-webfont.eot);
+  src: url(freighttextpro-demibold-webfont.eot?#iefix)
+      format('embedded-opentype'),
+    url(freighttextpro-demibold-webfont.woff2) format('woff2'),
+    url(freighttextpro-demibold-webfont.woff) format('woff'),
+    url(freighttextpro-demibold-webfont.ttf) format('truetype'),
+    url(freighttextpro-demibold-webfont.svg#freight_text_probook_italic)
+      format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: proxima_nova_rgbold;
+  src: url(proximanova-bold_0-webfont.eot);
+  src: url(proximanova-bold_0-webfont.eot?#iefix) format('embedded-opentype'),
+    url(proximanova-bold_0-webfont.woff2) format('woff2'),
+    url(proximanova-bold_0-webfont.woff) format('woff'),
+    url(proximanova-bold_0-webfont.ttf) format('truetype'),
+    url(proximanova-bold_0-webfont.svg#proxima_nova_rgbold) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: icomoon;
+  src: url(icomoon.eot?s7jhf);
+  src: url(icomoon.eot?s7jhf#iefix) format('embedded-opentype'),
+    url(icomoon.ttf?s7jhf) format('truetype'),
+    url(icomoon.woff?s7jhf) format('woff'),
+    url(icomoon.svg?s7jhf#icomoon) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
