@@ -138,7 +138,7 @@
               class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-content mt2 mb3 center"
             >
               <h2 class="light mb1">
-                For the last <strong>12 years</strong>, I have been building
+                For the last <strong>15 years</strong>, I have been building
                 digital products.
               </h2>
               <h3 class="light mb1 text-xs color-white-faded">
