@@ -1,4 +1,6 @@
 
 dist/
 .nuxt/
+.yarn/
+node_modules/
 .eslintcache
