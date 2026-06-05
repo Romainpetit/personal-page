@@ -94,8 +94,8 @@
       <div class="container">
         <div class="title-2 center">Building web products.</div>
         <h2 class="light text-inline">
-          Front-end developement with a strong focus on accessibility, in the
-          Vue.js ecosystem. For
+          Design system developement with a strong focus on accessibility, in
+          the Vue.js ecosystem. For
           <span v-for="mission in missions" :key="mission.slug">
             <span v-if="mission.active" class="title-1 text-inline">
               <a
